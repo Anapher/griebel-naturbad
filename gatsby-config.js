@@ -9,7 +9,7 @@ module.exports = {
         navigation: [
           {
             title: "Projekte",
-            url: "https://Www.google.de",
+            url: "/projects/page/1",
           },
           {
             title: "Hello 2",
@@ -34,6 +34,23 @@ module.exports = {
         copyright: "Griebel",
       },
     },
+    templates: {
+      projects: {
+        path: "/content/projects/",
+        pathPrefix: "projects",
+        template: "project",
+        pagination: {
+          template: "projectsAll",
+          resultsPerPage: 6,
+        },
+        filters: {
+          type: {
+            pathPrefix: "projects/type",
+            template: "projectType",
+          },
+        },
+      },
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -42,6 +59,27 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `project-pages`,
+        path: `${__dirname}/content/projects`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
       },
     },
     `gatsby-transformer-sharp`,
@@ -60,10 +98,24 @@ module.exports = {
     },
     "gatsby-plugin-typescript",
     "gatsby-plugin-material-ui",
+    // {
+    //   resolve: `gatsby-plugin-typography`,
+    //   options: {
+    //     pathToConfigModule: `src/utils/typography`,
+    //   },
+    // },
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: "gatsby-plugin-prefetch-google-fonts",
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        fonts: [
+          {
+            family: "Roboto",
+          },
+          {
+            family: "Work Sans",
+            variants: ["800"],
+          },
+        ],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

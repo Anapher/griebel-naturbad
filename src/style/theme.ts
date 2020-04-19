@@ -1,12 +1,14 @@
-import { createMuiTheme } from "@material-ui/core/styles"
+import { createMuiTheme } from "@material-ui/core/styles";
+import green from "@material-ui/core/colors/green";
 
 export default createMuiTheme({
   palette: {
     primary: {
-      main: "#1f55ff",
+      main: "#3498db",
     },
     secondary: {
-      main: "#6902bf",
+      main: "#27ae60",
+      contrastText: "#FFFFFF",
     },
     type: "light",
     text: {
@@ -20,4 +22,4 @@ export default createMuiTheme({
       main: "#28a745",
     },
   },
-})
+});

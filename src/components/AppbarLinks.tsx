@@ -28,17 +28,6 @@ const useStyles = makeStyles(theme => ({
     width: "auto",
     margin: "0",
     padding: "0",
-    [theme.breakpoints.down("sm")]: {
-      width: "100%",
-      "&:after": {
-        width: "calc(100% - 30px)",
-        content: '""',
-        display: "block",
-        height: "1px",
-        marginLeft: "15px",
-        backgroundColor: "#e5e5e5",
-      },
-    },
   },
   navLink: {
     minWidth: 96,
@@ -49,16 +38,6 @@ const useStyles = makeStyles(theme => ({
     "&:hover,&:focus": {
       color: "inherit",
       background: "rgba(200, 200, 200, 0.2)",
-    },
-    [theme.breakpoints.down("sm")]: {
-      width: "calc(100% - 30px)",
-      marginLeft: "15px",
-      marginBottom: "8px",
-      marginTop: "8px",
-      textAlign: "left",
-      "& > span:first-child": {
-        justifyContent: "flex-start",
-      },
     },
   },
 }));
@@ -88,8 +67,12 @@ function NavButton({ nav }: NavButtonProps) {
         className: classes.navLink,
         color: "transparent",
       }}
-      dropdownList={nav.links?.map(x => (
-        <Link style={{ textDecoration: "none", color: "inherit" }} to={x.url}>
+      dropdownList={nav.links?.map((x: any) => (
+        <Link
+          key={x.title}
+          style={{ textDecoration: "none", color: "inherit" }}
+          to={x.url}
+        >
           {x.title}
         </Link>
       ))}
@@ -107,7 +90,7 @@ const AppBarLinks = ({ navigation }: AppBarLinksProps) => {
   return (
     <List className={classes.list}>
       {navigation.map((link: any) => (
-        <ListItem className={classes.listItem} key={link.heading}>
+        <ListItem className={classes.listItem} key={link.title}>
           <NavButton nav={link} />
         </ListItem>
       ))}

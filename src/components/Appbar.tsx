@@ -1,20 +1,18 @@
-import React, { useEffect, useState } from "react";
 import {
-  makeStyles,
-  ButtonBase,
-  useMediaQuery,
   AppBar,
-  Toolbar,
-  IconButton,
   Box,
+  ButtonBase,
+  IconButton,
+  makeStyles,
   Theme,
+  Toolbar,
+  useMediaQuery,
 } from "@material-ui/core";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import classNames from "classnames";
+import { graphql, Link, useStaticQuery } from "gatsby";
+import React, { useEffect, useState } from "react";
 import { MdMenu } from "react-icons/md";
 import { container } from "../style/shared";
-import classNames from "classnames";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
 import AppBarLinks from "./AppbarLinks";
 
 const useStyles = makeStyles(theme => ({
@@ -32,9 +30,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center",
     flexFlow: "row nowrap",
     justifyContent: "flex-start",
-
-    position: "fixed",
-    zIndex: 1100,
+    position: "relative",
   },
   container: {
     ...container,
@@ -58,15 +54,25 @@ const useStyles = makeStyles(theme => ({
     borderRadius: 4,
     height: 48,
   },
+  fixed: {
+    position: "fixed",
+    zIndex: 1100,
+  },
 }));
 
 type Props = {
   elevation: number;
   onToggleDrawer: () => void;
   transparentUntil?: number;
+  fixed?: boolean;
 };
 
-export default ({ elevation = 1, onToggleDrawer, transparentUntil }: Props) => {
+export default ({
+  elevation = 1,
+  onToggleDrawer,
+  transparentUntil,
+  fixed = false,
+}: Props) => {
   const classes = useStyles();
   const isXs = useMediaQuery((theme: Theme) => theme.breakpoints.down("xs"));
 
@@ -120,10 +126,10 @@ export default ({ elevation = 1, onToggleDrawer, transparentUntil }: Props) => {
   return (
     <AppBar
       color="primary"
-      position="fixed"
       elevation={elevation}
       className={classNames({
         [classes.appBar]: true,
+        [classes.fixed]: fixed,
         [classes.transparent]: isTransparent && transparentUntil,
       })}
     >

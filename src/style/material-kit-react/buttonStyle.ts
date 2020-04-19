@@ -6,12 +6,14 @@ import {
   successColor,
   warningColor,
   dangerColor,
+  defaultFont,
 } from "./material-kit-react";
 import { Styles } from "@material-ui/core/styles/withStyles";
 import { Theme } from "@material-ui/core";
 
 const buttonStyle: Styles<Theme, {}, string> = {
   button: {
+    ...defaultFont,
     minHeight: "auto",
     minWidth: "auto",
     backgroundColor: grayColor,
