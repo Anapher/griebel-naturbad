@@ -5,6 +5,7 @@ import {
   ListItem,
   Button,
   ButtonBase,
+  Typography,
 } from "@material-ui/core";
 import { Link } from "gatsby";
 import CustomButton from "./CustomButton";
@@ -33,7 +34,7 @@ const useStyles = makeStyles(theme => ({
     minWidth: 96,
     padding: "0.9375rem",
     fontWeight: 400,
-    fontSize: "12px",
+    fontSize: 13.5,
     textTransform: "uppercase",
     "&:hover,&:focus": {
       color: "inherit",
@@ -67,15 +68,14 @@ function NavButton({ nav }: NavButtonProps) {
         className: classes.navLink,
         color: "transparent",
       }}
-      dropdownList={nav.links?.map((x: any) => (
-        <Link
-          key={x.title}
-          style={{ textDecoration: "none", color: "inherit" }}
-          to={x.url}
-        >
-          {x.title}
-        </Link>
-      ))}
+      menuItemComponent={Link}
+      menuItemProps={x => {
+        console.log(x);
+
+        return { to: x.url };
+      }}
+      items={nav.links}
+      renderItem={x => <Typography>{x.title}</Typography>}
     />
   );
 }

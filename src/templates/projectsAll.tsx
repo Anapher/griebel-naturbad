@@ -9,7 +9,8 @@ import { Pagination } from "@material-ui/lab";
 const useStyles = makeStyles({
   container: {
     ...container,
-    marginTop: 24,
+    marginTop: 56,
+    marginBottom: 56,
   },
 });
 

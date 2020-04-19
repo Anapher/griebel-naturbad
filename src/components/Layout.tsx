@@ -5,6 +5,7 @@ import theme from "../style/theme";
 import Appbar from "./Appbar";
 import Footer from "./Footer";
 import "../style/layout.css";
+import Helmet from "react-helmet";
 
 type Props = {
   elevateAppBar?: boolean;

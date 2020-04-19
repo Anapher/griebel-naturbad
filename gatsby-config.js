@@ -12,15 +12,23 @@ module.exports = {
             url: "/projects/page/1",
           },
           {
-            title: "Hello 2",
+            title: "Leistungen",
             links: [
               {
-                title: "Test 2",
-                url: "https://Www.google.de",
+                title: "Öffentliche Naturbäder",
+                url: "/projects/type/public",
               },
               {
-                title: "Test 3",
-                url: "https://Www.google.de",
+                title: "Private Schwimmteiche",
+                url: "/projects/type/privatePool",
+              },
+              {
+                title: "Wasserspielplätze",
+                url: "/projects/type/waterPlayground",
+              },
+              {
+                title: "Grünanlagen, Gärten",
+                url: "/projects/type/gardens",
               },
             ],
           },
@@ -57,15 +65,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `project-pages`,
-        path: `${__dirname}/content/projects`,
+        name: `data`,
+        path: `${__dirname}/content`,
       },
     },
     {
@@ -93,10 +94,11 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `content/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     "gatsby-plugin-typescript",
+    "gatsby-plugin-sass",
     "gatsby-plugin-material-ui",
     // {
     //   resolve: `gatsby-plugin-typography`,
@@ -118,8 +120,5 @@ module.exports = {
         ],
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 };

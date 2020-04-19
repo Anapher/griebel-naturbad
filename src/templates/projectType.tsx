@@ -34,7 +34,7 @@ export default function projectType({
         <Box textAlign="center" padding={2} marginBottom={2}>
           <Box marginBottom={1}>
             <Typography
-              color="primary"
+              color="secondary"
               variant="h3"
               style={{
                 fontWeight: "bold",

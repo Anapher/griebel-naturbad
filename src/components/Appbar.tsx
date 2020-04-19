@@ -7,6 +7,7 @@ import {
   Theme,
   Toolbar,
   useMediaQuery,
+  Typography,
 } from "@material-ui/core";
 import classNames from "classnames";
 import { graphql, Link, useStaticQuery } from "gatsby";
@@ -53,6 +54,9 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(1),
     borderRadius: 4,
     height: 48,
+  },
+  titleText: {
+    fontSize: 20,
   },
   fixed: {
     position: "fixed",
@@ -151,7 +155,9 @@ export default ({
             to="/"
             classes={{ root: classes.titleButton }}
           >
-            {title}
+            <Typography className={classes.titleText} variant="h4">
+              {title}
+            </Typography>
           </ButtonBase>
         </Box>
         {

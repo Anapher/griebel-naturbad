@@ -35,30 +35,35 @@ type Props = {
   hoverColor?: Color;
   buttonText?: React.ReactNode;
   buttonIcon?: string | React.ComponentType;
-  dropdownList?: any[];
   buttonProps?: any;
   dropup?: boolean;
-  dropdownHeader?: React.ReactNode;
   rtlActive?: boolean;
   caret?: boolean;
   left?: boolean;
   noLiPadding?: boolean;
   onClick?: () => void;
+
+  items?: any[];
+  renderItem: (item: any) => React.ReactNode;
+  menuItemComponent?: any;
+  menuItemProps?: (x: any) => any;
 };
 
 export default function CustomDropdown({
   buttonText,
   buttonIcon,
-  dropdownList,
+  items,
   buttonProps,
   dropup,
-  dropdownHeader,
   caret = true,
   hoverColor = "primary",
   left,
   rtlActive,
   noLiPadding,
   onClick,
+  menuItemComponent,
+  menuItemProps,
+  renderItem,
 }: Props) {
   const [anchorEl, setAnchorEl] = React.useState<null | any>(null);
 
@@ -111,6 +116,7 @@ export default function CustomDropdown({
       icon = null;
       break;
   }
+
   return (
     <div>
       <div>
@@ -157,31 +163,16 @@ export default function CustomDropdown({
             <Paper className={classes.dropdown}>
               <ClickAwayListener onClickAway={handleCloseAway}>
                 <MenuList role="menu" className={classes.menuList}>
-                  {dropdownHeader !== undefined ? (
-                    <MenuItem
-                      onClick={() => handleClose()}
-                      className={classes.dropdownHeader}
-                    >
-                      {dropdownHeader}
-                    </MenuItem>
-                  ) : null}
-                  {dropdownList?.map((prop, key) => {
-                    if (prop.divider) {
-                      return (
-                        <Divider
-                          key={key}
-                          onClick={() => handleClose()}
-                          className={classes.dropdownDividerItem}
-                        />
-                      );
-                    }
+                  {items?.map((item, key) => {
                     return (
                       <MenuItem
+                        component={menuItemComponent}
+                        {...(menuItemProps && menuItemProps(item))}
                         key={key}
                         onClick={() => handleClose()}
                         className={dropdownItem}
                       >
-                        {prop}
+                        {renderItem(item)}
                       </MenuItem>
                     );
                   })}
@@ -194,8 +185,3 @@ export default function CustomDropdown({
     </div>
   );
 }
-
-CustomDropdown.defaultProps = {
-  caret: true,
-  hoverColor: "primary",
-};
