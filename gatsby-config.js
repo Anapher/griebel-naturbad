@@ -1,8 +1,39 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Büro für Freiraumplanung`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
+    lang: "de",
+    components: {
+      appbar: {
+        navigation: [
+          {
+            title: "Projekte",
+            url: "https://Www.google.de",
+          },
+          {
+            title: "Hello 2",
+            links: [
+              {
+                title: "Test 2",
+                url: "https://Www.google.de",
+              },
+              {
+                title: "Test 3",
+                url: "https://Www.google.de",
+              },
+            ],
+          },
+          {
+            title: "Kontakt",
+            url: "/contact",
+          },
+        ],
+      },
+      footer: {
+        copyright: "Griebel",
+      },
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -28,8 +59,15 @@ module.exports = {
       },
     },
     "gatsby-plugin-typescript",
+    "gatsby-plugin-material-ui",
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
