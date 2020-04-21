@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react"
-import { makeStyles } from "@material-ui/core"
-import classNames from "classnames"
-import BackgroundImage from "gatsby-background-image"
+import React, { useState, useEffect } from "react";
+import { makeStyles } from "@material-ui/core";
+import classNames from "classnames";
+import BackgroundImage from "gatsby-background-image";
+import { isDomAvailable } from "../utils/dom";
 
 const useStyles = makeStyles({
   parallax: {
@@ -35,16 +36,21 @@ const useStyles = makeStyles({
   small: {
     height: "380px",
   },
-})
+});
 
 type Props = {
-  filter?: boolean
-  className?: string
-  children?: React.ReactNode
-  style?: React.CSSProperties
-  image: any
-  small?: boolean
-}
+  filter?: boolean;
+  className?: string;
+  children?: React.ReactNode;
+  style?: React.CSSProperties;
+  image: any;
+  small?: boolean;
+};
+
+const getCurrentScrollTransform = () => {
+  const y = window.innerWidth >= 768 ? window.pageYOffset / 3 : 0;
+  return `translate3d(0,${y}px,0)`;
+};
 
 export default function Parallax({
   filter,
@@ -54,37 +60,31 @@ export default function Parallax({
   image,
   small,
 }: Props) {
-  let windowScrollTop
-  if (window.innerWidth >= 768) {
-    windowScrollTop = window.pageYOffset / 3
-  } else {
-    windowScrollTop = 0
+  if (!isDomAvailable()) {
+    return <BackgroundImage fluid={image}>{children}</BackgroundImage>;
   }
-  const [transform, setTransform] = useState(
-    "translate3d(0," + windowScrollTop + "px,0)"
-  )
+
+  const [transform, setTransform] = useState(getCurrentScrollTransform);
 
   useEffect(() => {
-    if (window.innerWidth >= 768) {
-      window.addEventListener("scroll", resetTransform)
+    const width = window.innerWidth;
+
+    if (width >= 768) {
+      window.addEventListener("scroll", resetTransform);
+      return () => window.removeEventListener("scroll", resetTransform);
     }
-    return function cleanup() {
-      if (window.innerWidth >= 768) {
-        window.removeEventListener("scroll", resetTransform)
-      }
-    }
-  })
+  });
 
   const resetTransform = () => {
-    var windowScrollTop = window.pageYOffset / 3
-    setTransform("translate3d(0," + windowScrollTop + "px,0)")
-  }
+    var windowScrollTop = window.pageYOffset / 3;
+    setTransform(getCurrentScrollTransform());
+  };
 
-  const classes = useStyles()
+  const classes = useStyles();
   const parallaxClasses = classNames(classes.parallax, className, {
     [classes.filter]: filter,
     [classes.small]: small,
-  })
+  });
 
   return (
     <BackgroundImage
@@ -97,5 +97,5 @@ export default function Parallax({
     >
       {children}
     </BackgroundImage>
-  )
+  );
 }

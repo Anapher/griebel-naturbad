@@ -4,6 +4,14 @@ module.exports = {
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
     lang: "de",
+    contact: {
+      location: [51.370221, 9.387045],
+      address:
+        "Büro für Freiraumplanung\nIm Graben 9\n34292 Ahnatal\nHessen, Deutschland",
+      phone: "Franz Griebel\n05609 8097939\nMon - Fr, 8:00-18:00",
+      fax: "05609 8097938",
+      emailAddress: "info@griebel-naturbad.de",
+    },
     components: {
       appbar: {
         navigation: [
@@ -106,6 +114,7 @@ module.exports = {
     //     pathToConfigModule: `src/utils/typography`,
     //   },
     // },
+    "gatsby-plugin-react-leaflet",
     {
       resolve: "gatsby-plugin-prefetch-google-fonts",
       options: {
