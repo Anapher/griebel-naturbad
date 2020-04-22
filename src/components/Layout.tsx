@@ -3,7 +3,7 @@ import { ThemeProvider } from "@material-ui/styles";
 import { CssBaseline, Box, makeStyles, Theme } from "@material-ui/core";
 import theme from "../style/theme";
 import Appbar from "./Appbar";
-import Footer from "./Footer";
+import Footer, { FOOTER_HEIGHT_PX } from "./Footer";
 import "../style/layout.css";
 import Helmet from "react-helmet";
 
@@ -18,6 +18,9 @@ type Props = {
 const useStyles = makeStyles((theme: Theme) => ({
   appbarPlaceholder: {
     ...theme.mixins.toolbar,
+  },
+  content: {
+    minHeight: `calc(100vh - ${FOOTER_HEIGHT_PX}px)`,
   },
 }));
 
@@ -41,8 +44,10 @@ export default function Layout({
         onToggleDrawer={handleToggleDrawer}
         elevation={elevateAppBar ? 1 : 0}
       />
-      {!overlayContent && <div className={classes.appbarPlaceholder} />}
-      {children}
+      <div className={classes.content}>
+        {!overlayContent && <div className={classes.appbarPlaceholder} />}
+        {children}
+      </div>
       <Footer />
       {/* <Drawer open={isDrawerOpen} onClose={handleToggleDrawer} /> */}
     </ThemeProvider>

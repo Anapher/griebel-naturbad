@@ -1,8 +1,11 @@
-import React from "react";
-import { StaticQuery, graphql, useStaticQuery } from "gatsby";
-import { makeStyles } from "@material-ui/core/styles";
 import { Box, Container, Grid, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import { graphql, useStaticQuery } from "gatsby";
+import React from "react";
 import Link from "../components/Link";
+
+/** must be a fixed height to compute the min height of the content area */
+export const FOOTER_HEIGHT_PX = 144;
 
 const useStyles = makeStyles(theme => ({
   footer: {
@@ -23,6 +26,7 @@ const useStyles = makeStyles(theme => ({
     "& li": {
       marginBottom: theme.spacing(0.5),
     },
+    height: FOOTER_HEIGHT_PX,
   },
 }));
 

@@ -1,12 +1,11 @@
-import React from "react";
 import {
-  ListItem,
-  ListItemText,
-  ListItemIcon,
-  List,
   Grid,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
   useTheme,
 } from "@material-ui/core";
+import React from "react";
 import { FaCheck } from "react-icons/fa";
 
 const fields = [
@@ -29,33 +28,17 @@ export default function FieldOfActivity() {
   const theme = useTheme();
 
   return (
-    <Grid container>
-      <Grid item xs={12} md={6}>
-        <List dense style={{ margin: 0, padding: 0 }}>
-          {fields.slice(0, Math.floor(fields.length / 2) + 1).map(x => (
-            <ListItem key={x}>
-              <ListItemIcon>
-                <FaCheck color={theme.palette.secondary.main} size={16} />
-              </ListItemIcon>
-              <ListItemText primary={x} />
-            </ListItem>
-          ))}
-        </List>
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <List dense style={{ margin: 0, padding: 0 }}>
-          {fields
-            .slice(Math.floor(fields.length / 2) + 1, fields.length)
-            .map(x => (
-              <ListItem key={x}>
-                <ListItemIcon>
-                  <FaCheck color={theme.palette.secondary.main} size={16} />
-                </ListItemIcon>
-                <ListItemText primary={x} />
-              </ListItem>
-            ))}
-        </List>
-      </Grid>
+    <Grid container spacing={0}>
+      {fields.map(x => (
+        <Grid item key={x} xs={12} md={6} lg={4}>
+          <ListItem>
+            <ListItemIcon>
+              <FaCheck color={theme.palette.secondary.main} size={16} />
+            </ListItemIcon>
+            <ListItemText primary={x} />
+          </ListItem>
+        </Grid>
+      ))}
     </Grid>
   );
 }

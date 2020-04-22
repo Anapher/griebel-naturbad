@@ -1,7 +1,9 @@
 import Typography from "typography";
 import grandViewTheme from "typography-theme-sutro";
 
-const typography = new Typography(grandViewTheme);
+export const theme = grandViewTheme;
+
+const typography = new Typography(theme);
 
 // Export helper functions
 export const { scale, rhythm, options } = typography;

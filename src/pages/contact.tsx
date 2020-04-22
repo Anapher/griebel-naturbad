@@ -109,7 +109,11 @@ function contact({
           <InfoItem
             icon={<FaEnvelope color={theme.palette.secondary.main} size={24} />}
             primary="Send mir eine E-Mail"
-            secondary={formatNewLine(emailAddress)}
+            secondary={
+              <a href={`mailto:${emailAddress}`}>
+                {formatNewLine(emailAddress)}
+              </a>
+            }
           />
         </Box>
       </Box>

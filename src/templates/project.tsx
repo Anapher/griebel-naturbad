@@ -1,19 +1,24 @@
-import React from "react";
-import Layout from "../components/Layout";
 import {
-  makeStyles,
   Box,
-  Typography,
-  Divider,
   Chip,
+  Divider,
+  makeStyles,
+  Typography,
   useMediaQuery,
   useTheme,
 } from "@material-ui/core";
-import { container } from "../style/shared";
+import { MDXProvider } from "@mdx-js/react";
 import { graphql, Link } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { DateTime } from "luxon";
+import React from "react";
+import Layout from "../components/Layout";
+import SpecificationsTable from "../components/mdx/SpecificationsTable";
+import { container } from "../style/shared";
 import typeMappings from "../utils/type-mapping";
+import typographyTheme from "../utils/typography";
+import typographyMDX from "../utils/typography-mdx";
+import MdxCarousel, { CarouselImage } from "../components/mdx/MdxCarousel";
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -45,6 +50,17 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+// const MyH1 = props => <h1 style={{ color: "tomato" }} {...props} />;
+// const MyParagraph = props => (
+//   <p style={{ fontSize: "18px", lineHeight: 1.6 }} />
+// );
+
+const defaultComponents = {
+  SpecificationsTable: props => <SpecificationsTable {...props} />,
+  Carousel: props => <MdxCarousel {...props} />,
+  CarouselImage: props => <CarouselImage {...props} />,
+};
+
 export default function project({
   data: {
     mdx: {
@@ -56,7 +72,8 @@ export default function project({
   const classes = useStyles();
   const theme = useTheme();
   const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
-  console.log(type);
+
+  const { Root, typography, ...components } = typographyMDX(typographyTheme);
 
   return (
     <Layout>
@@ -97,7 +114,9 @@ export default function project({
           </Box>
         </Box>
         <article className={classes.article}>
-          <MDXRenderer>{body}</MDXRenderer>
+          <MDXProvider components={{ ...components, ...defaultComponents }}>
+            <MDXRenderer>{body}</MDXRenderer>
+          </MDXProvider>
         </article>
       </div>
     </Layout>
