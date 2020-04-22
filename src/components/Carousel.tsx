@@ -16,7 +16,7 @@ type Props = {
   images: Image[];
 };
 
-const useStyle = makeStyles({
+const useStyle = makeStyles(theme => ({
   main: {
     border: "0",
     marginBottom: "30px",
@@ -36,7 +36,11 @@ const useStyle = makeStyles({
     transition: "all 300ms linear",
     overflow: "hidden",
   },
-});
+  text: {
+    backgroundColor: "rgba(45, 52, 54, 0.5)",
+    borderRadius: theme.shape.borderRadius,
+  },
+}));
 
 export default function Carousel({ images }: Props) {
   const settings: Settings = {
@@ -57,7 +61,9 @@ export default function Carousel({ images }: Props) {
           <div key={i}>
             <Img fluid={fluid} fixed={fixed} className="slick-image" />
             <div className="slick-caption">
-              <Typography variant="h6">{description}</Typography>
+              <Typography variant="h6" className={classes.text}>
+                {description}
+              </Typography>
             </div>
           </div>
         ))}
