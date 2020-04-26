@@ -50,7 +50,8 @@ export default function Project({
   data: {
     mdx: {
       body,
-      frontmatter: { title, date, type },
+      excerpt,
+      frontmatter: { title, date, type, description },
     },
   },
 }: any) {
@@ -60,7 +61,7 @@ export default function Project({
 
   return (
     <Layout>
-      <SEO title={title} />
+      <SEO title={title} description={description || excerpt} />
       <div className={classes.container}>
         <Box marginBottom={4}>
           <div className={classes.titleContainer}>
@@ -109,11 +110,13 @@ export const pageQuery = graphql`
   query($id: String!) {
     mdx(frontmatter: { id: { eq: $id } }) {
       body
+      excerpt(pruneLength: 125)
       frontmatter {
         id
         title
         type
         date
+        description
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 1280) {
