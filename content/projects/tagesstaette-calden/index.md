@@ -55,10 +55,9 @@ featuredImage: "./carousel/p028_0_1.jpg"
 </CarouselImage>
 </Carousel>
 
-
 <SpecificationsTable title="Technische Daten">
     {[
-        ["Baujahr", "2007"]
+        ["Baujahr", "2007"],
         ["Planungszeitraum", "2006 bis 2007"],
         ["Ausstattung:", "Sitzplätze für fünf Gruppen, barrierefreie Gestaltung mit Naturstein-Sitzmauern, zentraler Sitzplatz, Zierteich mit Quellbach, Hochbeete, abwechslungsreiche Bepflanzung mit Stauden der verschiedenen Lebensbereiche, Kräuterbeete"],
     ]}
