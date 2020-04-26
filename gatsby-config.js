@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Büro für Freiraumplanung`,
     subtitle: "dipl.-ing. Franz Griebel",
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Büro für Freiraumplanung. Öffentliche Naturbäder, private Schwimmteiche, Wasserspielplätze, Grünanlagen, Gärten, und mehr.`,
     author: `@gatsbyjs`,
     lang: "de",
     contact: {

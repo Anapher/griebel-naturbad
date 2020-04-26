@@ -1,20 +1,18 @@
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import {
+  Divider,
   Drawer,
   List,
   ListItem,
   ListItemText,
   makeStyles,
-  Typography,
-  Box,
-  Divider,
 } from "@material-ui/core";
+import { graphql, useStaticQuery } from "gatsby";
+import React from "react";
 import to from "../utils/to";
 
 const useStyles = makeStyles(theme => ({
   drawerContent: {
-    width: theme.spacing(25),
+    width: theme.spacing(30),
   },
   title: {
     fontSize: 14,
