@@ -12,7 +12,7 @@ import to from "../utils/to";
 
 const useStyles = makeStyles(theme => ({
   drawerContent: {
-    width: theme.spacing(30),
+    width: 280,
   },
   title: {
     fontSize: 14,
