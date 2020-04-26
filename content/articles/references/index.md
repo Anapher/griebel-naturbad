@@ -6,25 +6,25 @@ template: SimpleArticle.tsx
 
 # Referenzen
 
-**Schönau/Brend, Friedhof**
+#### Schönau/Brend, Friedhof
 Wettbewerb - selbständig
 
-**Schönau/Brend, Friedhof**
+#### Schönau/Brend, Friedhof
 Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - selbständig
 
-**Bad Neustadt, Fam. Reubelt, Außenanlagen**
+#### Bad Neustadt, Fam. Reubelt, Außenanlagen
 Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - selbständig
 
-**Nordheim/Rhön, Fam. Leischner, Außenanlagen**
+#### Nordheim/Rhön, Fam. Leischner, Außenanlagen
 Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - selbständig
 
-**Rödles, Dorferneuerung, Grünordnungsplanung**
+#### Rödles, Dorferneuerung, Grünordnungsplanung
 Entwurf - selbständig
 
-**Reyersbach, Dorferneuerung, Grünordnungsplanung**
+#### Reyersbach, Dorferneuerung, Grünordnungsplanung
 Entwurf - selbständig
 
-**Braidbach, Dorferneuerung, Grünordnungsplanung**
+#### Braidbach, Dorferneuerung, Grünordnungsplanung
 Entwurf - selbständig
 
 #### Gelsenkirchen, Gartenschau, Wettbewerb

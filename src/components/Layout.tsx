@@ -16,6 +16,9 @@ const defaultComponents = {
   SpecificationsTable: props => <SpecificationsTable {...props} />,
   Carousel: props => <MdxCarousel {...props} />,
   CarouselImage: props => <CarouselImage {...props} />,
+  h4: props => (
+    <h4 {...props} style={{ ...props.style, marginBottom: 0, marginTop: 24 }} />
+  ),
 };
 
 type Props = {
