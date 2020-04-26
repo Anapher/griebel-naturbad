@@ -49,18 +49,38 @@ export function CarouselImage({ children, description }: CarouselImageProps) {
   // what a shit show
   const imageWrapper = React.Children.toArray(
     children.props.children.props.children
-  ).find(x => typeof x !== "string").props.children;
+  ).find(x => typeof x !== "string").props.children[3];
+
+  console.log(imageWrapper);
+
+  const image = React.cloneElement(imageWrapper, {
+    style: {
+      width: "100%",
+      marginBottom: 0,
+      objectFit: "cover",
+    },
+  });
 
   return (
-    <div>
-      <div className="slick-image">{imageWrapper}</div>
-      {description && (
-        <div className="slick-caption">
-          <Typography variant="h6" className={classes.text}>
-            {description}
-          </Typography>
-        </div>
-      )}
+    <div
+      style={{
+        height: 0,
+        paddingTop: "56.25%",
+        position: "relative",
+      }}
+    >
+      <div
+        style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }}
+      >
+        <div className="slick-image">{image}</div>
+        {description && (
+          <div className="slick-caption">
+            <Typography variant="h6" className={classes.text}>
+              {description}
+            </Typography>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

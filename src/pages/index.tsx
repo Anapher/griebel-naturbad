@@ -4,15 +4,16 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import SEO from "../components/seo";
 import Parallax from "../components/Parallax";
-import { makeStyles, Grid, Typography, Box } from "@material-ui/core";
+import { makeStyles, Grid, Typography, Box, Button } from "@material-ui/core";
 import { container } from "../style/shared";
 import Section from "../components/Section";
 import Impressions from "./index/Impressions";
 import FieldOfActivity from "./index/FieldOfActivity";
 import History from "./index/History";
 import Achievements from "./index/Achievements";
+import to from "../utils/to";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   container: {
     ...container,
     zIndex: 12,
@@ -29,20 +30,42 @@ const useStyles = makeStyles({
     color: "#000",
     paddingTop: 24,
   },
-});
+  titleText: {
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 40,
+    },
+  },
+  subtitleText: {
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 25,
+    },
+  },
+}));
 
-const IndexPage = ({ data }: any) => {
+const IndexPage = ({
+  data: {
+    desktop,
+    site: {
+      siteMetadata: { title, subtitle },
+    },
+  },
+}: any) => {
   const classes = useStyles();
+
   return (
-    <Layout transparentUntil={400} fixed overlayContent>
+    <Layout transparentUntil={350} fixed overlayContent>
       <SEO title="Home" />
-      <Parallax filter image={data.desktop.childImageSharp.fluid}>
+      <Parallax filter image={desktop.childImageSharp.fluid}>
         <div className={classes.container}>
           <Grid container>
             <Grid item xs={12} sm={12} md={6}>
-              <Typography variant="h2">Büro für Freiraumplanung</Typography>
+              <Typography variant="h2" className={classes.titleText}>
+                {title}
+              </Typography>
               <Box marginTop={4}>
-                <Typography variant="h4">dipl.-ing. Franz Griebel</Typography>
+                <Typography variant="h4" className={classes.subtitleText}>
+                  {subtitle}
+                </Typography>
                 <Typography variant="subtitle1">
                   Landschaftsarchitekt BDLA
                 </Typography>
@@ -62,6 +85,28 @@ const IndexPage = ({ data }: any) => {
           <Section title="Tätigkeitsfeld" dense>
             <FieldOfActivity />
           </Section>
+          <Box marginBottom={3}>
+            <Grid container spacing={3}>
+              <Grid item>
+                <Button
+                  variant="outlined"
+                  color="secondary"
+                  {...to("/references")}
+                >
+                  Referenzen
+                </Button>
+              </Grid>
+              <Grid item>
+                <Button
+                  variant="outlined"
+                  color="secondary"
+                  {...to("/projects/page/1")}
+                >
+                  Zu meinen Projekten
+                </Button>
+              </Grid>
+            </Grid>
+          </Box>
           <Section title="Geschichte" dense>
             <History />
           </Section>
@@ -80,6 +125,12 @@ export const pageQuery = graphql`
         fluid(quality: 90, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
+        subtitle
       }
     }
   }

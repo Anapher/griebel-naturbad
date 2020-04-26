@@ -1,11 +1,22 @@
-import React, { useState } from "react";
+import { CssBaseline, makeStyles, Theme } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
-import { CssBaseline, Box, makeStyles, Theme } from "@material-ui/core";
+import React, { useState } from "react";
+import MdxCarousel, { CarouselImage } from "../components/mdx/MdxCarousel";
+import SpecificationsTable from "../components/mdx/SpecificationsTable";
+import "../style/layout.css";
 import theme from "../style/theme";
+import typographyTheme from "../utils/typography";
+import typographyMDX from "../utils/typography-mdx";
 import Appbar from "./Appbar";
 import Footer, { FOOTER_HEIGHT_PX } from "./Footer";
-import "../style/layout.css";
-import Helmet from "react-helmet";
+import { MDXProvider } from "@mdx-js/react";
+import AppbarDrawer from "./AppbarDrawer";
+
+const defaultComponents = {
+  SpecificationsTable: props => <SpecificationsTable {...props} />,
+  Carousel: props => <MdxCarousel {...props} />,
+  CarouselImage: props => <CarouselImage {...props} />,
+};
 
 type Props = {
   elevateAppBar?: boolean;
@@ -34,22 +45,25 @@ export default function Layout({
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const handleToggleDrawer = () => setIsDrawerOpen(!isDrawerOpen);
   const classes = useStyles();
+  const { Root, typography, ...components } = typographyMDX(typographyTheme);
 
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Appbar
-        fixed={fixed}
-        transparentUntil={transparentUntil}
-        onToggleDrawer={handleToggleDrawer}
-        elevation={elevateAppBar ? 1 : 0}
-      />
-      <div className={classes.content}>
-        {!overlayContent && <div className={classes.appbarPlaceholder} />}
-        {children}
-      </div>
-      <Footer />
-      {/* <Drawer open={isDrawerOpen} onClose={handleToggleDrawer} /> */}
+      <MDXProvider components={{ ...components, ...defaultComponents }}>
+        <CssBaseline />
+        <Appbar
+          fixed={fixed}
+          transparentUntil={transparentUntil}
+          onToggleDrawer={handleToggleDrawer}
+          elevation={elevateAppBar ? 1 : 0}
+        />
+        <div className={classes.content}>
+          {!overlayContent && <div className={classes.appbarPlaceholder} />}
+          {children}
+        </div>
+        <Footer />
+        <AppbarDrawer open={isDrawerOpen} onClose={handleToggleDrawer} />
+      </MDXProvider>
     </ThemeProvider>
   );
 }

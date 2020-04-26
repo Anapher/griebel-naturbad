@@ -1,8 +1,14 @@
-import { Box, Container, Grid, Typography } from "@material-ui/core";
+import {
+  Box,
+  Container,
+  Typography,
+  Divider,
+  Link as MaterialLink,
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, Link } from "gatsby";
 import React from "react";
-import Link from "../components/Link";
+import to from "../utils/to";
 
 /** must be a fixed height to compute the min height of the content area */
 export const FOOTER_HEIGHT_PX = 144;
@@ -11,53 +17,16 @@ const useStyles = makeStyles(theme => ({
   footer: {
     color: theme.palette.common.white,
     backgroundColor: theme.palette.grey[900],
-    "& a": {
-      color: theme.palette.grey[300],
-      textDecoration: "none",
-      fontSize: ".9rem",
-    },
-    "& a:hover": {
-      textDecoration: "underline",
-    },
-    "& ul": {
-      padding: 0,
-      listStyle: "none",
-    },
-    "& li": {
-      marginBottom: theme.spacing(0.5),
-    },
     height: FOOTER_HEIGHT_PX,
   },
+  link: {
+    color: theme.palette.common.white,
+    textDecoration: "none",
+    "&:hover": {
+      textDecoration: "underline",
+    },
+  },
 }));
-
-type FooterColumnsProps = {
-  columns: any[];
-};
-
-const FooterColumns = ({ columns }: FooterColumnsProps) => {
-  return (
-    <Grid container spacing={2}>
-      {columns.map(column => {
-        return (
-          <Grid xs={12} sm={4} item key={column.heading}>
-            <Typography style={{ fontWeight: "bold" }}>
-              {column.heading}
-            </Typography>
-            <ul>
-              {column.links.map((link: any) => {
-                return (
-                  <li key={link.title}>
-                    <Link to={link.url}>{link.title}</Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </Grid>
-        );
-      })}
-    </Grid>
-  );
-};
 
 export default function Footer() {
   const classes = useStyles();
@@ -87,11 +56,32 @@ export default function Footer() {
   return (
     <Box component="footer" className={classes.footer}>
       <Container maxWidth="md">
-        <Box padding={4}>
+        <Box padding={4} display="flex" justifyContent="center">
           {/* <FooterColumns columns={columns} /> */}
-          <Box textAlign="center" marginTop={2}>
+          <Box
+            textAlign="center"
+            marginTop={2}
+            display="flex"
+            alignItems="center"
+          >
             <Typography variant="caption">
               &copy; {new Date().getFullYear()} {copyright}
+            </Typography>
+            <Divider
+              orientation="vertical"
+              light
+              style={{
+                backgroundColor: "gray",
+                marginLeft: 8,
+                marginRight: 8,
+              }}
+            />
+            <Typography
+              {...to("/impressum")}
+              variant="caption"
+              className={classes.link}
+            >
+              Impressum
             </Typography>
           </Box>
         </Box>

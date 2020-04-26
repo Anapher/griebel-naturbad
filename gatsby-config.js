@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Büro für Freiraumplanung`,
+    subtitle: "dipl.-ing. Franz Griebel",
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
     lang: "de",
@@ -24,19 +25,19 @@ module.exports = {
             links: [
               {
                 title: "Öffentliche Naturbäder",
-                url: "/projects/type/public",
+                url: "/services/public",
               },
               {
                 title: "Private Schwimmteiche",
-                url: "/projects/type/privatePool",
+                url: "/services/privatePool",
               },
               {
                 title: "Wasserspielplätze",
-                url: "/projects/type/waterPlayground",
+                url: "/services/waterPlayground",
               },
               {
                 title: "Grünanlagen, Gärten",
-                url: "/projects/type/gardens",
+                url: "/services/garden",
               },
             ],
           },
@@ -47,24 +48,28 @@ module.exports = {
         ],
       },
       footer: {
-        copyright: "Griebel",
+        copyright: "dipl.-ing. Franz Griebel",
       },
     },
     templates: {
       projects: {
         path: "/content/projects/",
         pathPrefix: "projects",
-        template: "project",
+        template: "Project.tsx",
         pagination: {
-          template: "projectsAll",
+          template: "ProjectsAll.tsx",
           resultsPerPage: 6,
         },
         filters: {
           type: {
             pathPrefix: "projects/type",
-            template: "projectType",
+            template: "ProjectType.tsx",
           },
         },
+      },
+      services: {
+        pathPrefix: "services",
+        template: "Service.tsx",
       },
     },
   },

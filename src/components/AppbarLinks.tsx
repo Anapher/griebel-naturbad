@@ -69,11 +69,7 @@ function NavButton({ nav }: NavButtonProps) {
         color: "transparent",
       }}
       menuItemComponent={Link}
-      menuItemProps={x => {
-        console.log(x);
-
-        return { to: x.url };
-      }}
+      menuItemProps={x => ({ to: x.url })}
       items={nav.links}
       renderItem={x => <Typography>{x.title}</Typography>}
     />

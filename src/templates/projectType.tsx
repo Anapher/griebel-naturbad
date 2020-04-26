@@ -5,6 +5,7 @@ import Projects from "../components/Projects";
 import { makeStyles, Box, Typography, Divider } from "@material-ui/core";
 import { container } from "../style/shared";
 import typeMappings from "../utils/type-mapping";
+import SEO from "../components/seo";
 
 const useStyles = makeStyles({
   container: {
@@ -13,7 +14,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function projectType({
+export default function ProjectType({
   data: {
     allMdx: { edges },
     site: {
@@ -30,18 +31,15 @@ export default function projectType({
 
   return (
     <Layout>
+      <SEO title={`${typeMappings[type]} Projekte`} />
       <div className={classes.container}>
         <Box textAlign="center" padding={2} marginBottom={2}>
           <Box marginBottom={1}>
             <Typography
               color="secondary"
-              variant="h3"
+              variant="h5"
               style={{
                 fontWeight: "bold",
-                fontFamily:
-                  "Work Sans, -apple-system, BlinkMacSystemFont, Roboto, sans-serif",
-                marginBottom: 4,
-                textDecoration: "none",
               }}
             >
               {typeMappings[type]}
@@ -66,7 +64,10 @@ export const pageQuery = graphql`
         }
       }
     }
-    allMdx(filter: { frontmatter: { type: { eq: $type } } }) {
+    allMdx(
+      filter: { frontmatter: { type: { eq: $type } } }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
       edges {
         node {
           excerpt

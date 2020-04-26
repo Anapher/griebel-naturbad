@@ -7,18 +7,14 @@ import {
   useMediaQuery,
   useTheme,
 } from "@material-ui/core";
-import { MDXProvider } from "@mdx-js/react";
 import { graphql, Link } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { DateTime } from "luxon";
 import React from "react";
 import Layout from "../components/Layout";
-import SpecificationsTable from "../components/mdx/SpecificationsTable";
 import { container } from "../style/shared";
 import typeMappings from "../utils/type-mapping";
-import typographyTheme from "../utils/typography";
-import typographyMDX from "../utils/typography-mdx";
-import MdxCarousel, { CarouselImage } from "../components/mdx/MdxCarousel";
+import SEO from "../components/seo";
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -50,18 +46,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-// const MyH1 = props => <h1 style={{ color: "tomato" }} {...props} />;
-// const MyParagraph = props => (
-//   <p style={{ fontSize: "18px", lineHeight: 1.6 }} />
-// );
-
-const defaultComponents = {
-  SpecificationsTable: props => <SpecificationsTable {...props} />,
-  Carousel: props => <MdxCarousel {...props} />,
-  CarouselImage: props => <CarouselImage {...props} />,
-};
-
-export default function project({
+export default function Project({
   data: {
     mdx: {
       body,
@@ -73,10 +58,9 @@ export default function project({
   const theme = useTheme();
   const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
 
-  const { Root, typography, ...components } = typographyMDX(typographyTheme);
-
   return (
     <Layout>
+      <SEO title={title} />
       <div className={classes.container}>
         <Box marginBottom={4}>
           <div className={classes.titleContainer}>
@@ -105,7 +89,7 @@ export default function project({
                 />
               </div>
               <Typography variant="body2">
-                {DateTime.fromISO(date).toLocaleString(DateTime.DATE_FULL)}
+                {DateTime.fromISO(date).toLocaleString({ year: "numeric" })}
               </Typography>
             </div>
           </div>
@@ -114,9 +98,7 @@ export default function project({
           </Box>
         </Box>
         <article className={classes.article}>
-          <MDXProvider components={{ ...components, ...defaultComponents }}>
-            <MDXRenderer>{body}</MDXRenderer>
-          </MDXProvider>
+          <MDXRenderer>{body}</MDXRenderer>
         </article>
       </div>
     </Layout>
@@ -124,8 +106,8 @@ export default function project({
 }
 
 export const pageQuery = graphql`
-  query($postId: String!) {
-    mdx(frontmatter: { id: { eq: $postId } }) {
+  query($id: String!) {
+    mdx(frontmatter: { id: { eq: $id } }) {
       body
       frontmatter {
         id

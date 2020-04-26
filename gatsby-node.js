@@ -30,21 +30,23 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
                 }
               }
             }
+            services {
+              pathPrefix
+              template
+            }
           }
         }
       }
     }
   `);
 
-  /* Find all of the markdown files, sorted descending by filename.
-   * Newest-to-oldest with YYYY-MM-DD date file prefix.
-   */
-
   const createMarkdownPages = async ({
     regex,
     template,
     pathPrefix = "",
     paginate = false,
+    resultsPerPage,
+    paginationTemplate,
   }) => {
     const result = await graphql(`
 			{
@@ -54,10 +56,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 				) {
 					edges {
 						node {
-							body
 							frontmatter {
-                                id
-                                date
+                id
 							}
 						}
 					}
@@ -75,40 +75,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     const pages = result.data.allMdx.edges;
 
     // Calculate the number of paginated results pages.
-    const totalPages = Math.ceil(
-      pages.length / templates.projects.pagination.resultsPerPage
-    );
+    const totalPages = Math.ceil(pages.length / resultsPerPage);
 
-    const staticPages = pages.map(({ node }, index) => {
-      // Use a permalink based on the frontmatter id in each markdown file header.
-      const postId = node.frontmatter.id;
-
-      // Define the date based on the filename.
-      const postDate = node.date;
-
-      // The path to the previous page.
-      const previousPath =
-        index === pages.length - 1
-          ? null
-          : `/${pathPrefix}/${pages[index + 1].node.frontmatter.id}`;
-
-      // The path to the next page.
-      const nextPath =
-        index === 0
-          ? null
-          : `/${pathPrefix}/${pages[index - 1].node.frontmatter.id}`;
-
-      return createPage({
-        path: `${pathPrefix}/${postId}`,
-        component: path.resolve(`${__dirname}/src/templates/${template}.tsx`),
+    const staticPages = pages.map(({ node: { frontmatter: { id } } }) =>
+      createPage({
+        path: `${pathPrefix}/${id}`,
+        component: path.resolve(`${__dirname}/src/templates/${template}`),
         context: {
-          postId,
-          postDate,
-          previousPath,
-          nextPath,
+          id,
         },
-      });
-    });
+      })
+    );
 
     return !paginate
       ? staticPages
@@ -118,7 +95,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             createPage({
               path: `${pathPrefix}/page/${i + 1}`,
               component: path.resolve(
-                `${__dirname}/src/templates/${templates.projects.pagination.template}.tsx`
+                `${__dirname}/src/templates/${paginationTemplate}`
               ),
               context: {
                 limit: templates.projects.pagination.resultsPerPage,
@@ -155,9 +132,76 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return types.map(async ({ type }) =>
       createPage({
         path: `${pathPrefix}/${type}`,
-        component: path.resolve(`${__dirname}/src/templates/${template}.tsx`),
+        component: path.resolve(`${__dirname}/src/templates/${template}`),
         context: {
           type,
+        },
+      })
+    );
+  };
+
+  const createServiceInfo = async ({ pathPrefix = "", template }) => {
+    const result = await graphql(`
+      {
+        allMdx(filter: { fileAbsolutePath: { regex: "/services/" } }) {
+          edges {
+            node {
+              id
+              fileAbsolutePath
+            }
+          }
+        }
+      }
+    `);
+
+    // Report any errors if they occurred.
+    if (result.errors) {
+      reporter.panicOnBuild(`Error while running GraphQL query.`);
+      return;
+    }
+
+    // Create a page for each tag.
+    const edges = result.data.allMdx.edges;
+    return edges.map(async ({ node: { id, fileAbsolutePath } }) => {
+      const type = /\/services\/([^\/]+)/.exec(fileAbsolutePath)[1];
+
+      return createPage({
+        path: `${pathPrefix}/${type}`,
+        component: path.resolve(`${__dirname}/src/templates/${template}`),
+        context: {
+          type,
+          id,
+        },
+      });
+    });
+  };
+
+  const createArticles = async () => {
+    const {
+      data: {
+        allMdx: { edges },
+      },
+    } = await graphql(`
+      {
+        allMdx(filter: { fileAbsolutePath: { regex: "/articles/" } }) {
+          edges {
+            node {
+              frontmatter {
+                id
+                template
+              }
+            }
+          }
+        }
+      }
+    `);
+
+    return edges.map(({ node: { frontmatter: { id, template } } }) =>
+      createPage({
+        path: `${id}`,
+        component: path.resolve(`${__dirname}/src/templates/${template}`),
+        context: {
+          id,
         },
       })
     );
@@ -169,13 +213,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       regex: templates.projects.path,
       pathPrefix: templates.projects.pathPrefix,
       template: templates.projects.template,
+      resultsPerPage: templates.projects.pagination.resultsPerPage,
+      paginationTemplate: templates.projects.pagination.template,
       paginate: true,
     }),
 
     // Create pages for each frontmatter tag used in src/content/posts with paginated result pages.
-    createProjectType({
-      pathPrefix: templates.projects.filters.type.pathPrefix,
-      template: templates.projects.filters.type.template,
-    }),
+    createProjectType(templates.projects.filters.type),
+
+    createServiceInfo(templates.services),
+
+    createArticles(),
   ]);
 };

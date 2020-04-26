@@ -5,6 +5,7 @@ import { container } from "../style/shared";
 import { graphql, navigate } from "gatsby";
 import Projects from "../components/Projects";
 import { Pagination } from "@material-ui/lab";
+import SEO from "../components/seo";
 
 const useStyles = makeStyles({
   container: {
@@ -14,7 +15,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function projectsAll({
+export default function ProjectsAll({
   data: {
     site: {
       siteMetadata: {
@@ -31,6 +32,7 @@ export default function projectsAll({
 
   return (
     <Layout>
+      <SEO title={`Projekte - Seite ${currentPage}`} />
       <div className={classes.container}>
         <Projects projects={projects} pathPrefix={pathPrefix} />
         {totalPages > 1 && (
@@ -40,7 +42,7 @@ export default function projectsAll({
               color="textSecondary"
               style={{ display: "block", marginTop: 32, marginBottom: 4 }}
             >
-              Select page:
+              Seite auswählen:
             </Typography>
             <Pagination
               page={currentPage}

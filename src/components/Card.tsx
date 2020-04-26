@@ -14,6 +14,7 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { DateTime } from "luxon";
+import BackgroundImage from "gatsby-background-image";
 
 const useStyles = makeStyles(() => ({
   cardActions: {
@@ -53,9 +54,14 @@ export default ({
   return (
     <Card elevation={0} classes={{ root: classes.card }}>
       <CardActionArea component={Link} to={url}>
-        <Img
-          fluid={featuredImage.childImageSharp.fluid}
-          style={{ borderRadius: 2 }}
+        <BackgroundImage
+          style={{
+            height: 0,
+            paddingTop: "56.25%",
+            objectFit: "cover",
+            width: "100%",
+          }}
+          fluid={featuredImage?.childImageSharp.fluid}
         />
       </CardActionArea>
       <CardContent classes={{ root: classes.cardContent }}>
@@ -73,7 +79,7 @@ export default ({
           {title}
         </Typography>
         <Typography variant="caption" color="textSecondary">
-          {DateTime.fromISO(date).toLocaleString(DateTime.DATE_FULL)}
+          {DateTime.fromISO(date).toLocaleString({ year: "numeric" })}
         </Typography>
         <Box marginY={1}>
           <Divider light />
@@ -82,7 +88,14 @@ export default ({
           variant="subtitle2"
           color="textSecondary"
           component="p"
-          style={{ fontFamily: "Merriweather, Georgia, serif" }}
+          style={{
+            fontFamily: "Merriweather, Georgia, serif",
+            textOverflow: "ellipsis",
+            maxHeight: "3.6em",
+            lineHeight: "1.8em",
+            wordWrap: "break-word",
+            overflow: "hidden",
+          }}
         >
           {excerpt}
         </Typography>

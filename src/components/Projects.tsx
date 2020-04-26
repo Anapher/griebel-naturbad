@@ -10,7 +10,7 @@ const Projects = ({ projects, pathPrefix, disableTags = false }: any) => {
         ({
           node: {
             excerpt,
-            frontmatter: { id, title, featuredImage, date, type },
+            frontmatter: { id, title, featuredImage, date, type, description },
           },
         }) => {
           return (
@@ -23,7 +23,7 @@ const Projects = ({ projects, pathPrefix, disableTags = false }: any) => {
                 title={title}
                 url={`/${pathPrefix}/${id}`}
                 date={date}
-                excerpt={excerpt}
+                excerpt={description || excerpt}
               />
             </Grid>
           );

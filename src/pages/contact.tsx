@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 import { container } from "../style/shared";
 import { isDomAvailable } from "../utils/dom";
 import { graphql } from "gatsby";
+import SEO from "../components/seo";
 
 const useStyles = makeStyles({
   container: container,
@@ -82,6 +83,7 @@ function contact({
 
   return (
     <Layout>
+      <SEO title="Kontakt" />
       <div style={{ width: "100%", height: "300px" }}>
         <Map position={location} />
       </div>

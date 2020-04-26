@@ -40,6 +40,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "space-between",
     display: "flex",
     flexWrap: "nowrap",
+    "@media (min-width: 576px)": {},
   },
   menuButton: {
     marginRight: theme.spacing(1),

@@ -1,0 +1,23 @@
+---
+id: "naturbad-abtswind"
+title: "Naturbad Abtswind"
+date: "2005-01-01T00:00:00.000Z"
+description: ""
+type: "public"
+featuredImage: "./entwurf.jpg"
+---
+
+!["Entwurf"](./entwurf.jpg)
+
+
+<SpecificationsTable title="Vorkonzept - technische Daten">
+    {[
+        ["Planungszeitraum:", "2005"],
+        ["Gesamtfläche:", "1,5 ha"],
+        ["Bauweise:", "Umbau, 2-Kammer-System"],
+        ["Badebecken:", "kombiniertes Nichtschwimmer-/ Schwimmerbecken mit integriertem Sprungbereich, separates Kinderbecken"],
+        ["Nutzbare Wasserfläche:", "940 m²"],
+        ["Wasseraufbereitung:", "vollbiologisch über techn. Feuchtgebiet (Constructed Wetland) mit horizontaler Durchströmung"],
+        ["Ausstattung:", "vier 25-m-Schwimmbahnen,  Sprungstein mit 1-m-Plattform, Holzstegen aus Lärchenholz, Kiesstrand, Sprudelsteine im NS-Bereich, Wasserfall, Rutsche, Kinderbecken mit Bachlauf, Sprudelsteinen, Sprühschlange und Kleinkind-rutsche, Wasserspielplatz, Beachvolleyball, Tischtennis."],
+    ]}
+</SpecificationsTable>
