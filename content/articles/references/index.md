@@ -7,103 +7,103 @@ template: SimpleArticle.tsx
 # Referenzen
 
 #### Schönau/Brend, Friedhof
-Wettbewerb - selbständig
+Wettbewerb (selbstständig)
 
 #### Schönau/Brend, Friedhof
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - selbständig
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
 #### Bad Neustadt, Fam. Reubelt, Außenanlagen
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - selbständig
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
 #### Nordheim/Rhön, Fam. Leischner, Außenanlagen
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - selbständig
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
 #### Rödles, Dorferneuerung, Grünordnungsplanung
-Entwurf - selbständig
+Entwurf (selbstständig)
 
 #### Reyersbach, Dorferneuerung, Grünordnungsplanung
-Entwurf - selbständig
+Entwurf (selbstständig)
 
 #### Braidbach, Dorferneuerung, Grünordnungsplanung
-Entwurf - selbständig
+Entwurf (selbstständig)
 
 #### Gelsenkirchen, Gartenschau, Wettbewerb
-- freie Mitarbeit
+(freie Mitarbeit)
 
 #### Seulingen, Hauptstraße, Straßenbegleitgrün
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - angestellt
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (angestellt)
 
 #### Seesen, Kindergarten, Außenanlagen
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - angestellt
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (angestellt)
 
 #### Duderstadt, Pestalozzischule, Außenanlagen
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - angestellt
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (angestellt)
 
 #### Saalfeld, Rehaklinik, Außenanlagen
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe - angestellt
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe (angestellt)
 
 #### Potsdam/Neu Fahrland, Rehaklinik, Außenanlagen
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe - angestellt
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe (angestellt)
 
 #### Osterode, Kreishaus, Außenanlagen
-Entwurf, Genehmigungsplanung - angestellt
+Entwurf, Genehmigungsplanung (angestellt)
 
 #### Göttingen, Studentenwohnheime/Nordgebiet, Außenanlagen
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - angestellt
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (angestellt)
 
 #### Bad Brambach, Rehaklinik, Außenanlagen
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe - angestellt
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe (angestellt)
 
 #### Göttingen, Wohngebiet am Papenberg, Siedlungsgrün
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - angestellt
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (angestellt)
 
 #### Bad Doberan, Rehaklinik, Außenanlagen
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe - angestellt
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe (angestellt)
 
 #### Seulingen, Bergstraße, Straßenbegleitgrün
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - angestellt
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (angestellt)
 
 #### München, Montenschlößchen, Außenanlagen
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe - angestellt
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe (angestellt)
 
 #### Bad Wildungen, Kurpark, Wettbewerb
-- angestellt
+(angestellt)
 
 #### Göttingen, Zietenkaserne, Wettbewerb
-- angestellt
+(angestellt)
 
 #### Papenburg, Stadtpark, Wettbewerb
-- angestellt
+(angestellt)
 
 #### Germendorf, Wohnpark, Grünordnungsplan
-Entwurf, Genehmigungsplanung - angestellt
+Entwurf, Genehmigungsplanung (angestellt)
 
 #### Uslar, Dr. Heinevetter, Außenanlagen
-Entwurf, Ausführungsplanung - angestellt
+Entwurf, Ausführungsplanung (angestellt)
 
 #### Bad Doberan, Kurpark
-Entwurf - angestellt
+Entwurf (angestellt)
 
 #### Schönhagen, Schwimmteich
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - angestellt
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (angestellt)
 
 #### Berlin, Potsdamer Platz, Wettbewerb
-- angestellt
+(angestellt)
 
 #### Hagen, Wohngebiet am Kratzkopt, Wettbewerb
-- angestellt
+(angestellt)
 
 #### Niedermeiser, Spielplätze
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - angestellt
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (angestellt)
 
 #### Hannover, Klagesmarkt, Wettbewerb
-- angestellt
+(angestellt)
 
 #### Uslar, Schönhagen, Expo 2000
-- angestellt
+(angestellt)
 
 #### Hardegsen, Fam. Schicks, Außenanlagen
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - angestellt
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (angestellt)
 
 #### Göttingen, Fachmarktzentrum
 Entwurf, Genehmigungsplanung, angestellt
@@ -112,205 +112,277 @@ Entwurf, Genehmigungsplanung, angestellt
 Entwurf, angestellt
 
 #### Berlin Weissensee, Neue Wiesen, Wettbewerb
-- angestellt
+(angestellt)
 
 #### Weisswasser, Fachmarkt, Grünordnungsplan
-- angestellt
+(angestellt)
 
 #### Uslar, Kindertagesstätte, Außenanlagen
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - angestellt
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (angestellt)
 
 #### Worbis, Schwimmteich
-Entwurf - angestellt
+Entwurf (angestellt)
 
 #### Eilenburg, Marktplatz, Wettbewerb
-- selbständig
+(selbstständig)
 
 #### Leinefelde, Lunapark, Spiel- und Sportanlagen
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - Subplaner
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (Subplaner)
 
 #### Göttingen, Bahnhofswestseite OHZ, Außengestaltung
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - angestellt
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (angestellt)
 
 #### Elliehausen, Friedhof
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - Subplaner
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (Subplaner)
 
 #### Niestetal, Schwimmteich
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - Subplaner
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (Subplaner)
 
 #### Hann. Münden, Wasserspuren, Wettbewerb
-- Subplaner
+(Subplaner)
 
 #### Arnstadt, Friedhof
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - Subplaner
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (Subplaner)
 
 #### Ravensbrück, Gedenkstätte ehem. Frauen-KZ, Wettbewerb
-- selbständig
+(selbstständig)
 
 #### Banteln, Schwimmteich
-Entwurf - Subplaner
+Entwurf (Subplaner)
 
 #### Bocholt, Friedhof, Wettbewerb
-- selbständig
+(selbstständig)
 
 #### Frankfurt, Brentanobad, Schwimmteich
-Machbarkeitsstudie - Subplaner
+Machbarkeitsstudie (Subplaner)
 
 #### Zweckverband Ruhrgebiet, drei Schwimmteiche
-Machbarkeitsstudie - Subplaner
+Machbarkeitsstudie (Subplaner)
 
 #### Bundesautobahn A 20 Lübeck-Stettin, Streckenabschnitt 2841, Strasburg-Pasewalk, Landschaftspflegerische Ausführungsplanung
-Ausführungsplanung - Subplaner
+Ausführungsplanung (Subplaner)
 
 #### Kassel, Fam. Siegner, Außenanlagen
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - selbständig
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
 #### Kassel, Fam. Kramer, Außenanlagen
-Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - selbständig
+Entwurf, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
 #### Kassel, Praktiker Bau- und Gartenmarkt, Außenanlagen
-Entwurf, Genehmigungsplanung - selbständig
+Entwurf, Genehmigungsplanung (selbstständig)
 
 #### Eschershausen, Schwimmteich
-Machbarkeitsstudie - Subplaner
+Machbarkeitsstudie (Subplaner)
 
 #### Bundesautobahn A 20 Lübeck-Stettin, Streckenabschnitt 2834, Neubrandenburg-Woldegk, Landschaftspflegerische Ausführungsplanung
-Ausschreibung/Vergabe, Bauüberwachung - Subplaner
+Ausschreibung/Vergabe, Bauüberwachung (Subplaner)
 
 #### Rhumequelle, Umfeldgestaltung
-Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung - Subplaner
+Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (Subplaner)
 
 #### Vellmar, Baugebiet am Osterberg, Wettbewerb
-- selbständig
+(selbstständig)
 
 #### Schauenburg, Elgerhaus, Wettbewerb
-- selbständig
+(selbstständig)
 
 #### Siegbach, Naturerlebnisbad
-Ausführungsplanung, Bauüberwachung - Subplaner
+Ausführungsplanung, Bauüberwachung (Subplaner)
 
 #### Simonswald, Haus der Begegnung, Realisierungswettbewerb
-- selbständig
+(selbstständig)
 
 #### Bad Orb, Naturerlebnisbad
-Ausführungsplanung, Bauüberwachung - Subplaner
+Ausführungsplanung, Bauüberwachung (Subplaner)
 
 #### Bad Orb, Naturerlebnisbad
-Eingriffs- und Ausgleichsplanung - selbständig
+Eingriffs- und Ausgleichsplanung (selbstständig)
 
 #### Schönau an der Brend, Naturerlebnisbad
-Vorkonzept - selbständig
+Vorkonzept (selbstständig)
 
 #### Wacken, Naturerlebnisbad
-Machbarkeitsstudie - selbständig
+Machbarkeitsstudie (selbstständig)
 
 #### Gemeinde Simmerath, OT. Einruhr, Naturerlebnisbad
-Machbarkeitsstudie - selbständig
+Machbarkeitsstudie (selbstständig)
 
 #### Gemeinde Simmerath, OT. Rurberg, Naturerlebnisbad
-Machbarkeitsstudie - selbständig
+Machbarkeitsstudie (selbstständig)
 
 #### Gemeinde Lengede, Sportanlage Broistedt mit Naturerlebnisbad
-Ideenwettbewerb - selbständig
+Ideenwettbewerb (selbstständig)
 
 #### BFFL Braunschweig, Naturbad
-Machbarkeitsstudie - selbständig
+Machbarkeitsstudie (selbstständig)
 
 #### Gemeinde Lengede, Naturerlebnisbad Broistedt
-Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung
-- selbständig
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
 #### Gemeinde Ebstorf, Naturerlebnisbad Wriedel
-Machbarkeitsstudie - selbständig
+Machbarkeitsstudie (selbstständig)
 
 #### Simmerath, OT. Einruhr, Naturbad
-Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung
-- selbständig
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
 #### Sonneberg, Naturbad
-Vorstudie - selbständig
+Vorstudie (selbstständig)
 
 #### Olfen, Naturbad
-Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung
-- selbständig
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
 #### Warburg, OT. Menne, Naturbad
-Vorkonzept - selbständig
+Vorkonzept (selbstständig)
 
 #### Campingplatz Fuhrenkamp, Bergen/Dumme, Naturbad
-Vorkonzept - selbständig
+Vorkonzept (selbstständig)
 
 #### Hirzenhain, Naturbad
-Vorkonzept - selbständig
+Vorkonzept (selbstständig)
 
 #### Sonneberg, Campingplatz am Naturbad
-Vorkonzept - selbständig
+Vorkonzept (selbstständig)
 
 #### Abtswind, Naturbad
-Vorkonzept - selbständig
+Vorkonzept (selbstständig)
 
 #### Bergisch-Gladbach, Naturbad am Campingplatz
-Vorkonzept - selbständig
+Vorkonzept (selbstständig)
 
 #### Zeven, Naturbad
-Vorkonzept - selbständig
+Vorkonzept (selbstständig)
 
 #### Seniorenwohnanlage Calden
-Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung
-- selbständig
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
 #### Heigenbrücken, Naturbad
-Vorkonzept - selbständig
+Vorkonzept (selbstständig)
 
 #### Naturbad Poststadion Berlin-Moabit
-Vorkonzept - selbständig
+Vorkonzept (selbstständig)
 
 #### Heigenbrücken, Naturbad
-Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung
-- selbständig
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
 #### ABF 2007 Hannover, Gestaltung der Fachmesse Naturbäder in Halle 23
-Entwurf, Ausführungsplanung, Bauüberwachung - selbständig
+Entwurf, Ausführungsplanung, Bauüberwachung (selbstständig)
 
 #### Tagesstätte Werk-Hilfe Calden
-Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung
-- selbständig
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
 #### Cebit 2007, Hannover, Gestaltung Teich Halle 2
-Entwurf, Bauüberwachung - selbständig
+Entwurf, Bauüberwachung (selbstständig)
 
 #### Naturbad Schönhagen, Sanierung
-Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung
-- selbständig
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
 #### Schwimmteich Familie Wiegel, Ahlheim-Heinebach
-Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung
-- selbständig
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
 #### Schwimmteich Familie Gerholt, Wenigenhasungen
-Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung
-- selbständig
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
 #### Naturbad Campingplatz Freiholz, Bergen an der Dumme
-Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung
-- selbständig
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
 #### Wasserspielplatz Niddaaue, Sanierung, Frankfurt/M.
-Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung
-- selbständig
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
 #### Außenanlagen mit Schwimmteich, Dr. Reichert, Kassel
-Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung
-- selbständig
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
 #### Schwimmteich Saunagarten Tournesol-Allwetterbad, Idstein
-Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung
-- selbständig
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
 #### Naturschwimmbad Schwalbach
-Vorkonzept
-- selbständig
+Vorkonzept (selbstständig)
 
 #### Soziales Zentrum Espenau
-Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung
-- selbständig 
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
+
+#### Naturschwimmbad Campingplatz Ivendorf
+Vorentwurf (selbstständig)
+
+#### Saunateich Rathmanndorfer Schleuse
+Vorentwurf (selbstständig)
+
+#### WC-Container Wasserspielplatz am Ginnheimer Wäldchen
+Eingriffs- und Ausgleichsplanung (selbstständig)
+
+#### Optimierung Naturbad Campotel, Bad Rothenfelde
+Entwurf, Bauüberwachung, Betreuung (selbstständig)
+
+#### Teichanlage für die Interbad Stuttgart 2012
+Entwurf, Bauüberwachung (selbstständig)
+
+#### Erweiterung Tagesstätte Werk-Hilfe Calden Vorentwurf
+(selbstständig)
+
+#### Wasserspielplatz Scheerwald, Sanierung, Frankfurt/M.
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
+
+#### Lärmschutz Landgasthaus Hochspessart Heigenbrücken
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
+
+#### Naturschwimmbad Ferienpark Olsdorf
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
+
+#### Naturbad Osterzell
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
+
+#### Spielgolfplatz in Heigenbrücken
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
+
+#### Schwimmteich Fam. Böhm, Dransfeld
+Entwurf, Genehmigungsplanung (selbstständig)
+
+#### 8. Int. Schwimmteichkongress Köln 2015 Ausstellungsgestaltung
+Entwurf (selbstständig)
+
+#### Naturschwimmbad Groß Wittfeitzen
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
+
+#### Wasserspielplatz Tannenwald, Sanierung, Frankfurt/M.
+Entwurf, Genehmigungsplanung, Ausführungs-planung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
+
+#### Freizeitanlage Winterberg
+Entwurf (selbstständig)
+
+#### Sanierung Wasserspielplatz Koblenz
+Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
+
+#### Naturbad Hainich-Klinikum Mühlhausen
+Vorkonzept (selbstständig)
+
+#### Wettbewerb Naturschwimmmbad Großen-Buseck, Sachgutachter
+(selbstständig)
+
+#### Sanierung Waldseebad Gaggenau
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (subplaner)
+
+#### Außenanlagen Wohnbebauung Heppenschwand
+Vorentwurf (Subplaner)
+
+#### Wasserspielplatz Grünberg
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
+
+#### Sanierung Sprühfeld Niddapark, Frankfurt/Main
+(selbstständig)
+
+#### Naturschwimmbad Grebenstein
+Vorkonzept (selbstständig)
+
+#### Naturschwimmbad Campingplatz Borkenberge
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
+
+#### Sanierung Naturerlebnisbad Lauenstein
+(selbstständig)
+
+#### Gartenplanung Fam. Bachhofer, Parsberg
+Entwurf (selbstständig)
+
+#### Sanierung Naturschwimmbad anima GmbH, Dachau
+(selbstständig)
+
+#### Sanierung Naturschwimmbad Balance GmbH, Kassel
+(selbstständig)
