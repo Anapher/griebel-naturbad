@@ -12,9 +12,9 @@ const useStyles = makeStyles({
     position: "relative",
     backgroundPosition: "center center",
     backgroundSize: "cover",
-    margin: "0",
-    padding: "0",
-    border: "0",
+    margin: 0,
+    padding: 0,
+    border: 0,
     display: "flex",
     alignItems: "center",
   },
@@ -24,17 +24,17 @@ const useStyles = makeStyles({
     },
     "&:after,&:before": {
       position: "absolute",
-      zIndex: "1",
+      zIndex: 1,
       width: "100%",
       height: "100%",
       display: "block",
-      left: "0",
-      top: "0",
+      left: 0,
+      top: 0,
       content: "''",
     },
   },
   small: {
-    height: "380px",
+    height: 380,
   },
 });
 
@@ -60,13 +60,12 @@ export default function Parallax({
   image,
   small,
 }: Props) {
-  if (!isDomAvailable()) {
-    return <BackgroundImage fluid={image}>{children}</BackgroundImage>;
-  }
-
-  const [transform, setTransform] = useState(getCurrentScrollTransform);
+  const classes = useStyles();
+  const [transform, setTransform] = useState("translate3d(0,0,0)");
 
   useEffect(() => {
+    if (!isDomAvailable()) return;
+
     const width = window.innerWidth;
 
     if (width >= 768) {
@@ -76,11 +75,13 @@ export default function Parallax({
   });
 
   const resetTransform = () => {
-    var windowScrollTop = window.pageYOffset / 3;
     setTransform(getCurrentScrollTransform());
   };
 
-  const classes = useStyles();
+  if (!isDomAvailable()) {
+    return <BackgroundImage fluid={image}>{children}</BackgroundImage>;
+  }
+
   const parallaxClasses = classNames(classes.parallax, className, {
     [classes.filter]: filter,
     [classes.small]: small,
