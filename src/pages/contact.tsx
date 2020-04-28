@@ -1,12 +1,12 @@
 import { Box, makeStyles, Typography, useTheme } from "@material-ui/core";
+import { graphql } from "gatsby";
 import React from "react";
 import { FaEnvelope, FaFax, FaMapMarker, FaPhone } from "react-icons/fa";
-import { Map as LeafletMap, Marker, Popup, TileLayer } from "react-leaflet";
+import { Map as LeafletMap, Marker, TileLayer } from "react-leaflet";
 import Layout from "../components/Layout";
+import SEO from "../components/seo";
 import { container } from "../style/shared";
 import { isDomAvailable } from "../utils/dom";
-import { graphql } from "gatsby";
-import SEO from "../components/seo";
 
 const useStyles = makeStyles({
   container: container,
@@ -37,15 +37,9 @@ const InfoItem = ({ icon, primary, secondary }: InfoItemProps) => {
   );
 };
 
-const position = [51.370221, 9.387045];
-
 const Map = ({ position }: any) => {
-  if (!isDomAvailable()) {
-    return (
-      <div>
-        <p className="map-loading">Loading map...</p>
-      </div>
-    );
+  if (typeof window === "undefined") {
+    return null;
   }
 
   return (
@@ -84,7 +78,7 @@ function contact({
   return (
     <Layout>
       <SEO title="Kontakt" />
-      <div style={{ width: "100%", height: "300px" }}>
+      <div style={{ width: "100%", height: 300 }}>
         <Map position={location} />
       </div>
       <Box className={classes.container} marginY={8}>
