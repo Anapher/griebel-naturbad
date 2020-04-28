@@ -78,9 +78,9 @@ export default function Parallax({
     setTransform(getCurrentScrollTransform());
   };
 
-  if (!isDomAvailable()) {
-    return <BackgroundImage fluid={image}>{children}</BackgroundImage>;
-  }
+  // if (!isDomAvailable()) {
+  //   return <BackgroundImage fluid={image}>{children}</BackgroundImage>;
+  // }
 
   const parallaxClasses = classNames(classes.parallax, className, {
     [classes.filter]: filter,
