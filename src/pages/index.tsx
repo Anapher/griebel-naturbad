@@ -12,6 +12,7 @@ import FieldOfActivity from "./index/FieldOfActivity";
 import History from "./index/History";
 import Achievements from "./index/Achievements";
 import to from "../utils/to";
+import LogoWhite from "../assets/logo_white.svg";
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -34,10 +35,21 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down("sm")]: {
       fontSize: 40,
     },
+    [theme.breakpoints.up("sm")]: {
+      marginLeft: 132,
+    },
   },
   subtitleText: {
     [theme.breakpoints.down("sm")]: {
       fontSize: 25,
+    },
+  },
+  logo: {
+    width: 100,
+    marginRight: 32,
+    display: "block",
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
     },
   },
 }));
@@ -62,13 +74,16 @@ const IndexPage = ({
               <Typography variant="h2" className={classes.titleText}>
                 {title}
               </Typography>
-              <Box marginTop={4}>
-                <Typography variant="h4" className={classes.subtitleText}>
-                  {subtitle}
-                </Typography>
-                <Typography variant="subtitle1">
-                  Landschaftsarchitekt BDLA
-                </Typography>
+              <Box display="flex" flexDirection="row" alignItems="center">
+                <LogoWhite className={classes.logo} />
+                <Box>
+                  <Typography variant="h4" className={classes.subtitleText}>
+                    {subtitle}
+                  </Typography>
+                  <Typography variant="subtitle1">
+                    Landschaftsarchitekt BDLA
+                  </Typography>
+                </Box>
               </Box>
             </Grid>
           </Grid>

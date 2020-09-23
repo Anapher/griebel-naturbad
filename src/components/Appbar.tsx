@@ -8,13 +8,17 @@ import {
   Toolbar,
   useMediaQuery,
   Typography,
+  useScrollTrigger,
+  useTheme,
 } from "@material-ui/core";
 import classNames from "classnames";
 import { graphql, Link, useStaticQuery } from "gatsby";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { MdMenu } from "react-icons/md";
 import { container } from "../style/shared";
 import AppBarLinks from "./AppbarLinks";
+import Logo from "../assets/logo.svg";
+import LogoWhite from "../assets/logo_white.svg";
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -112,21 +116,13 @@ export default ({
     }
   `);
 
-  const [isTransparent, setIsTransparent] = useState(true);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
 
-  const headerColorChange = () => {
-    const windowsScrollTop = window.pageYOffset;
-
-    if (transparentUntil !== undefined)
-      setIsTransparent(windowsScrollTop < transparentUntil);
-  };
-
-  useEffect(() => {
-    if (transparentUntil) {
-      window.addEventListener("scroll", headerColorChange);
-      return () => window.removeEventListener("scroll", headerColorChange);
-    }
-  }, [transparentUntil]);
+  const trigger = useScrollTrigger({
+    threshold: isMobile ? 45 : transparentUntil,
+    disableHysteresis: true,
+  });
 
   return (
     <AppBar
@@ -135,7 +131,7 @@ export default ({
       className={classNames({
         [classes.appBar]: true,
         [classes.fixed]: fixed,
-        [classes.transparent]: isTransparent && transparentUntil,
+        [classes.transparent]: transparentUntil && !trigger,
       })}
     >
       <Toolbar className={classes.container}>
@@ -156,6 +152,11 @@ export default ({
             to="/"
             classes={{ root: classes.titleButton }}
           >
+            {trigger || !transparentUntil ? (
+              <Logo style={{ width: 50, marginRight: 16 }} />
+            ) : (
+              <LogoWhite style={{ width: 50, marginRight: 16 }} />
+            )}
             <Typography className={classes.titleText} variant="h4">
               {title}
             </Typography>
