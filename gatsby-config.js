@@ -6,11 +6,11 @@ module.exports = {
     author: `@gatsbyjs`,
     lang: "de",
     contact: {
-      location: [51.370221, 9.387045],
+      mapSrc:
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1265403.2034364091!2d8.678173374202933!3d51.72406088873035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bb15c5ede660eb%3A0x6831c71a90c6b6d2!2sIm%20Graben%209%2C%2034292%20Ahnatal!5e0!3m2!1sde!2sde!4v1600865734418!5m2!1sde!2sde",
       address:
         "Büro für Freiraumplanung\nIm Graben 9\n34292 Ahnatal\nHessen, Deutschland",
       phone: "Franz Griebel\n05609 8097939\nMon - Fr, 8:00-18:00",
-      fax: "05609 8097938",
       emailAddress: "info@griebel-naturbad.de",
     },
     components: {
@@ -96,6 +96,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-remark-images`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -132,6 +133,14 @@ module.exports = {
             variants: ["800"],
           },
         ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/,
+        },
       },
     },
   ],
