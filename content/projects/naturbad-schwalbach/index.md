@@ -1,6 +1,6 @@
 ---
-id: "naturbad-schwalbach"
-title: "Naturbad Schwalbach"
+id: "naturschwimmbad-schwalbach"
+title: "Naturschwimmbad Schwalbach"
 date: "2010-01-01T00:00:00.000Z"
 description: ""
 type: "public"
@@ -9,7 +9,7 @@ featuredImage: "./52Vorkonzept.JPG"
 
 ![Entwurf](./52Vorkonzept.JPG)
 
-<SpecificationsTable title="Naturbad Schwalbach - technische Daten">
+<SpecificationsTable title="Naturschwimmbad Schwalbach - technische Daten">
     {[
         ["Planungszeitraum:", "2010"],
         ["Gesamtfläche:", "1,7 ha"],

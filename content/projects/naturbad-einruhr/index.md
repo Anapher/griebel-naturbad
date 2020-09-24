@@ -1,6 +1,6 @@
 ---
-id: "naturbad-einruhr"
-title: "Naturbad Einruhr"
+id: "naturschwimmbad-einruhr"
+title: "Naturschwimmbad Einruhr"
 date: "2006-01-01T00:00:00.000Z"
 description: ""
 type: "public"
@@ -73,9 +73,9 @@ featuredImage: "./carousel/p017_0_1.jpg"
 ![Kinderbecken](./carousel/p017_0_13.jpg)
 
 </CarouselImage>
-<CarouselImage description="Naturbad am Rursee">
+<CarouselImage description="Naturschwimmbad am Rursee">
 
-![Naturbad am Rursee](./carousel/p017_0_14.jpg)
+![Naturschwimmbad am Rursee](./carousel/p017_0_14.jpg)
 
 </CarouselImage>
 <CarouselImage description="Schwimmbereich im Rursee">

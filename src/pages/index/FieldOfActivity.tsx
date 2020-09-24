@@ -9,7 +9,7 @@ import React from "react";
 import { FaCheck } from "react-icons/fa";
 
 const fields = [
-  "Naturbadplanung",
+  "Naturschwimmbadplanung",
   "Parkanlagen",
   "Grünzüge",
   "Siedlungsgrün",

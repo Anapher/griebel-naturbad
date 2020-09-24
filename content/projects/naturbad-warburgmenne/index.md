@@ -1,6 +1,6 @@
 ---
-id: "naturbad-warburgmenne"
-title: "Naturbad Warburg-Menne"
+id: "naturschwimmbad-warburgmenne"
+title: "Naturschwimmbad Warburg-Menne"
 date: "2005-01-01T00:00:00.000Z"
 description: ""
 type: "public"
@@ -9,7 +9,7 @@ featuredImage: ./entwurf.jpg
 
 !["Entwurf"](./entwurf.jpg)
 
-<SpecificationsTable title="Naturbad Warburg-Menne - Vorkonzept - technische Daten">
+<SpecificationsTable title="Naturschwimmbad Warburg-Menne - Vorkonzept - technische Daten">
     {[
         ["Planungszeitraum:", "2005"],
         ["Bauweise:", "Umbau, 2-Kammer-System"],

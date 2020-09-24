@@ -1,6 +1,6 @@
 ---
-id: "naturbad-heigenbruecken"
-title: "Naturbad Heigenbrücken"
+id: "naturschwimmbad-heigenbruecken"
+title: "Naturschwimmbad Heigenbrücken"
 date: "2008-01-01T00:00:00.000Z"
 description: ""
 type: "public"
@@ -41,7 +41,7 @@ featuredImage: "./carousel/p022_0_1.jpg"
 </Carousel>
 
 
-<SpecificationsTable title="Naturbad Heigenbrücken- technische Daten">
+<SpecificationsTable title="Naturschwimmbad Heigenbrücken- technische Daten">
     {[
         ["Baujahr:", "2008/2009"],
         ["Planungszeitraum:", "2006 bis 2008"],

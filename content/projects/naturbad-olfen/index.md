@@ -1,6 +1,6 @@
 ---
-id: "naturbad-olfen"
-title: "Naturbad Olfen"
+id: "naturschwimmbad-olfen"
+title: "Naturschwimmbad Olfen"
 date: "2009-01-01T00:00:00.000Z"
 description: ""
 type: "public"
@@ -161,7 +161,7 @@ featuredImage: "./carousel/p018_1_1.jpg"
 </Carousel>
 
 
-<SpecificationsTable title="Naturbad Olfen - technische Daten">
+<SpecificationsTable title="Naturschwimmbad Olfen - technische Daten">
     {[
         ["Baujahr:", "2009/2010"],
         ["Planungszeitraum:", "2004 bis 2008"],

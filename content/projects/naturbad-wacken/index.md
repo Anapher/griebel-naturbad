@@ -1,6 +1,6 @@
 ---
-id: "naturbad-wacken"
-title: "Naturbad Wacken"
+id: "naturschwimmbad-wacken"
+title: "Naturschwimmbad Wacken"
 date: "2002-01-01T00:00:00.000Z"
 description: ""
 type: "public"
@@ -26,7 +26,7 @@ featuredImage: "./carousel/p042_0_1.jpg"
 </Carousel>
 
 
-<SpecificationsTable title="Naturbad Wacken - Vorkonzept - technische Daten">
+<SpecificationsTable title="Naturschwimmbad Wacken - Vorkonzept - technische Daten">
     {[
         ["Planungszeitraum:", "2002"],
         ["Gesamtfläche:", "1,2 ha"],

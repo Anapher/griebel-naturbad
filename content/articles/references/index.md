@@ -213,7 +213,7 @@ Machbarkeitsstudie (selbstständig)
 #### Gemeinde Lengede, Sportanlage Broistedt mit Naturerlebnisbad
 Ideenwettbewerb (selbstständig)
 
-#### BFFL Braunschweig, Naturbad
+#### BFFL Braunschweig, Naturschwimmbad
 Machbarkeitsstudie (selbstständig)
 
 #### Gemeinde Lengede, Naturerlebnisbad Broistedt
@@ -222,46 +222,46 @@ Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüb
 #### Gemeinde Ebstorf, Naturerlebnisbad Wriedel
 Machbarkeitsstudie (selbstständig)
 
-#### Simmerath, OT. Einruhr, Naturbad
+#### Simmerath, OT. Einruhr, Naturschwimmbad
 Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
-#### Sonneberg, Naturbad
+#### Sonneberg, Naturschwimmbad
 Vorstudie (selbstständig)
 
-#### Olfen, Naturbad
+#### Olfen, Naturschwimmbad
 Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
-#### Warburg, OT. Menne, Naturbad
+#### Warburg, OT. Menne, Naturschwimmbad
 Vorkonzept (selbstständig)
 
-#### Campingplatz Fuhrenkamp, Bergen/Dumme, Naturbad
+#### Campingplatz Fuhrenkamp, Bergen/Dumme, Naturschwimmbad
 Vorkonzept (selbstständig)
 
-#### Hirzenhain, Naturbad
+#### Hirzenhain, Naturschwimmbad
 Vorkonzept (selbstständig)
 
-#### Sonneberg, Campingplatz am Naturbad
+#### Sonneberg, Campingplatz am Naturschwimmbad
 Vorkonzept (selbstständig)
 
-#### Abtswind, Naturbad
+#### Abtswind, Naturschwimmbad
 Vorkonzept (selbstständig)
 
-#### Bergisch-Gladbach, Naturbad am Campingplatz
+#### Bergisch-Gladbach, Naturschwimmbad am Campingplatz
 Vorkonzept (selbstständig)
 
-#### Zeven, Naturbad
+#### Zeven, Naturschwimmbad
 Vorkonzept (selbstständig)
 
 #### Seniorenwohnanlage Calden
 Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
-#### Heigenbrücken, Naturbad
+#### Heigenbrücken, Naturschwimmbad
 Vorkonzept (selbstständig)
 
-#### Naturbad Poststadion Berlin-Moabit
+#### Naturschwimmbad Poststadion Berlin-Moabit
 Vorkonzept (selbstständig)
 
-#### Heigenbrücken, Naturbad
+#### Heigenbrücken, Naturschwimmbad
 Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
 #### ABF 2007 Hannover, Gestaltung der Fachmesse Naturbäder in Halle 23
@@ -273,7 +273,7 @@ Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüb
 #### Cebit 2007, Hannover, Gestaltung Teich Halle 2
 Entwurf, Bauüberwachung (selbstständig)
 
-#### Naturbad Schönhagen, Sanierung
+#### Naturschwimmbad Schönhagen, Sanierung
 Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
 #### Schwimmteich Familie Wiegel, Ahlheim-Heinebach
@@ -282,7 +282,7 @@ Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüb
 #### Schwimmteich Familie Gerholt, Wenigenhasungen
 Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
-#### Naturbad Campingplatz Freiholz, Bergen an der Dumme
+#### Naturschwimmbad Campingplatz Freiholz, Bergen an der Dumme
 Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
 #### Wasserspielplatz Niddaaue, Sanierung, Frankfurt/M.
@@ -309,7 +309,7 @@ Vorentwurf (selbstständig)
 #### WC-Container Wasserspielplatz am Ginnheimer Wäldchen
 Eingriffs- und Ausgleichsplanung (selbstständig)
 
-#### Optimierung Naturbad Campotel, Bad Rothenfelde
+#### Optimierung Naturschwimmbad Campotel, Bad Rothenfelde
 Entwurf, Bauüberwachung, Betreuung (selbstständig)
 
 #### Teichanlage für die Interbad Stuttgart 2012
@@ -327,7 +327,7 @@ Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüb
 #### Naturschwimmbad Ferienpark Olsdorf
 Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
-#### Naturbad Osterzell
+#### Naturschwimmbad Osterzell
 Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
 #### Spielgolfplatz in Heigenbrücken
@@ -351,7 +351,7 @@ Entwurf (selbstständig)
 #### Sanierung Wasserspielplatz Koblenz
 Ausführungsplanung, Ausschreibung/Vergabe, Bauüberwachung (selbstständig)
 
-#### Naturbad Hainich-Klinikum Mühlhausen
+#### Naturschwimmbad Hainich-Klinikum Mühlhausen
 Vorkonzept (selbstständig)
 
 #### Wettbewerb Naturschwimmmbad Großen-Buseck, Sachgutachter

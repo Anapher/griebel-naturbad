@@ -1,6 +1,6 @@
 ---
-id: "naturbad-hirzenhain"
-title: "Naturbad Hirzenhain"
+id: "naturschwimmbad-hirzenhain"
+title: "Naturschwimmbad Hirzenhain"
 date: "2005-01-01T00:00:00.000Z"
 description: ""
 type: "public"
@@ -10,7 +10,7 @@ featuredImage: "./entwurf.jpg"
 !["Entwurf"](./entwurf.jpg)
 
 
-<SpecificationsTable title="Naturbad Hirzenhain - Vorkonzept - technische Daten">
+<SpecificationsTable title="Naturschwimmbad Hirzenhain - Vorkonzept - technische Daten">
     {[
         ["Planungszeitraum:", "2005"],
         ["Gesamtfläche:", "1,35 ha"],

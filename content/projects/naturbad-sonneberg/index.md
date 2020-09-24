@@ -1,6 +1,6 @@
 ---
-id: "naturbad-sonneberg"
-title: "Naturbad Sonneberg"
+id: "naturschwimmbad-sonneberg"
+title: "Naturschwimmbad Sonneberg"
 date: "2004-01-01T00:00:00.000Z"
 description: ""
 type: "public"

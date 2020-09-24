@@ -1,6 +1,6 @@
 ---
-id: "naturbad-poststadion_moabit"
-title: "Naturbad Berlin-Moabit"
+id: "naturschwimmbad-poststadion_moabit"
+title: "Naturschwimmbad Berlin-Moabit"
 date: "2006-01-01T00:00:00.000Z"
 description: ""
 type: "public"

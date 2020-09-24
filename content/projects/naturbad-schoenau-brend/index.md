@@ -1,6 +1,6 @@
 ---
-id: "naturbad-schoenau-brend"
-title: "Naturbad Schönau-Brend"
+id: "naturschwimmbad-schoenau-brend"
+title: "Naturschwimmbad Schönau-Brend"
 date: "2001-01-01T00:00:00.000Z"
 description: ""
 type: "public"
@@ -9,7 +9,7 @@ featuredImage: ./vorkonzept.jpg
 
 !["Vorkonzept"](./vorkonzept.jpg)
 
-<SpecificationsTable title="Naturbad Schönau-Brend">
+<SpecificationsTable title="Naturschwimmbad Schönau-Brend">
     {[
         ["Vorkonzept - technische Daten", "2001"],
         ["Gesamtfläche:", "1 ha"],

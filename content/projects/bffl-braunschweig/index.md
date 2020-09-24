@@ -1,6 +1,6 @@
 ---
 id: "bffl-braunschweig"
-title: "Naturbad BffL Braunschweig"
+title: "Naturschwimmbad BffL Braunschweig"
 date: "2003-01-01T00:00:00.000Z"
 description: ""
 type: "public"
@@ -36,7 +36,7 @@ featuredImage: "./carousel/p029_0_1.jpg"
 </Carousel>
 
 
-<SpecificationsTable title="Naturbad BffL Braunschweig - technische Daten">
+<SpecificationsTable title="Naturschwimmbad BffL Braunschweig - technische Daten">
     {[
         ["Baujahr:", "200"],
         ["Planungszeitraum:", "2003"],

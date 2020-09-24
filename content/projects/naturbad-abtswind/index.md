@@ -1,6 +1,6 @@
 ---
-id: "naturbad-abtswind"
-title: "Naturbad Abtswind"
+id: "naturschwimmbad-abtswind"
+title: "Naturschwimmbad Abtswind"
 date: "2005-01-01T00:00:00.000Z"
 description: ""
 type: "public"

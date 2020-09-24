@@ -1,6 +1,6 @@
 ---
-id: "naturbad-fuhrenkamp"
-title: "Naturbad Fuhrenkamp"
+id: "naturschwimmbad-fuhrenkamp"
+title: "Naturschwimmbad Fuhrenkamp"
 date: "2007-01-01T00:00:00.000Z"
 description: ""
 type: "public"
@@ -31,7 +31,7 @@ featuredImage: "./carousel/p031_1_1.jpg"
 </Carousel>
 
 
-<SpecificationsTable title="Naturbad Campingplatz Fuhrenkamp Bergen an der Dumme - technische Daten">
+<SpecificationsTable title="Naturschwimmbad Campingplatz Fuhrenkamp Bergen an der Dumme - technische Daten">
     {[
         ["Baujahr:", "2007 bis 2008"],
         ["Planungszeitraum:", "Neubau, 2-Kammer-System"],

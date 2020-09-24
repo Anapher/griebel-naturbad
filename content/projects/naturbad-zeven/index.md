@@ -1,6 +1,6 @@
 ---
-id: "naturbad-zeven"
-title: "Naturbad Zeven"
+id: "naturschwimmbad-zeven"
+title: "Naturschwimmbad Zeven"
 date: "2005-01-01T00:00:00.000Z"
 description: ""
 type: "public"

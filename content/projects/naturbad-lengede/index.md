@@ -1,6 +1,6 @@
 ---
-id: "naturbad-lengede"
-title: "Naturbad Lengede"
+id: "naturschwimmbad-lengede"
+title: "Naturschwimmbad Lengede"
 date: "2003-01-01T00:00:00.000Z"
 description: ""
 type: "public"
@@ -18,15 +18,15 @@ featuredImage: "./carousel/p047_0_1.jpg"
 ![Funktionsplan](./carousel/p047_0_2.jpg)
 
 </CarouselImage>
-<CarouselImage description="Detail Naturbad">
+<CarouselImage description="Detail Naturschwimmbad">
 
-![Detail Naturbad](./carousel/p047_0_3.jpg)
+![Detail Naturschwimmbad](./carousel/p047_0_3.jpg)
 
 </CarouselImage>
 </Carousel>
 
 
-<SpecificationsTable title="Naturbad Lengede - Wettbewerb - technische Daten">
+<SpecificationsTable title="Naturschwimmbad Lengede - Wettbewerb - technische Daten">
     {[
         ["Planungszeitraum:", "2003"],
         ["Gesamtfläche:", "2,5 ha"],
