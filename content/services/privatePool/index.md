@@ -1,3 +1,7 @@
+---
+projectType: "privatePool"
+---
+
 # Der Schwimmteich
 
 ... ist eine Kombination aus Swimmingpool und Gartenteich, der ohne häufigen Wasseraustausch und ohne Chemikalien mit geringem technischen Aufwand hygienisch einwandfreies Badewasser bietet.

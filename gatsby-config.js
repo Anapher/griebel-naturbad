@@ -18,28 +18,28 @@ module.exports = {
         navigation: [
           {
             title: "Projekte",
-            url: "/projects/page/1",
-          },
-          {
-            title: "Leistungen",
             links: [
               {
                 title: "Öffentliche Naturbäder",
-                url: "/services/public",
+                url: "/projects/overview/public",
               },
               {
                 title: "Private Schwimmteiche",
-                url: "/services/privatePool",
+                url: "/projects/overview/privatePool",
               },
               {
                 title: "Wasserspielplätze",
-                url: "/services/waterPlayground",
+                url: "/projects/overview/waterPlayground",
               },
               {
                 title: "Grünanlagen, Gärten",
-                url: "/services/garden",
+                url: "/projects/overview/garden",
               },
             ],
+          },
+          {
+            title: "Referenzen",
+            url: "/references",
           },
           {
             title: "Kontakt",
@@ -62,7 +62,7 @@ module.exports = {
         },
         filters: {
           type: {
-            pathPrefix: "projects/type",
+            pathPrefix: "projects/overview",
             template: "ProjectType.tsx",
           },
         },

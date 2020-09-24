@@ -57,7 +57,7 @@ export default function Service({
 }
 
 export const pageQuery = graphql`
-  query($id: String!, $type: String!) {
+  query($type: String!) {
     site {
       siteMetadata {
         templates {
@@ -92,9 +92,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    mdx(id: { eq: $id }) {
+    mdx(frontmatter: { projectType: { eq: $type } }) {
       body
-      excerpt
+      excerpt(pruneLength: 200)
     }
   }
 `;

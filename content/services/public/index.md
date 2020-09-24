@@ -1,3 +1,7 @@
+---
+projectType: "public"
+---
+
 # Öffentliche Naturbäder
 
 ## Zur Situation

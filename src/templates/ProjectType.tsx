@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Projects from "../components/Projects";
-import { makeStyles, Box, Typography, Divider } from "@material-ui/core";
+import {
+  makeStyles,
+  Box,
+  Typography,
+  Divider,
+  Card,
+  CardContent,
+  CardActions,
+  Button,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+} from "@material-ui/core";
 import { container } from "../style/shared";
 import typeMappings from "../utils/type-mapping";
 import SEO from "../components/seo";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles({
   container: {
@@ -24,10 +38,12 @@ export default function ProjectType({
         },
       },
     },
+    mdx: { body, excerpt },
   },
   pageContext: { type },
 }) {
   const classes = useStyles();
+  const [isInfoExpanded, setIsInfoExpanded] = useState(false);
 
   return (
     <Layout>
@@ -47,7 +63,26 @@ export default function ProjectType({
           </Box>
           <Divider variant="middle" />
         </Box>
-        <Projects projects={edges} pathPrefix={pathPrefix} disableTags />
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography>
+              Informationen über {typeMappings[type]}
+              <span style={{ fontSize: 14, opacity: 0.6, marginLeft: 16 }}>
+                {excerpt}
+              </span>
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <article>{<MDXRenderer>{body}</MDXRenderer>}</article>
+          </AccordionDetails>
+        </Accordion>
+        <Box mt={4}>
+          <Projects projects={edges} pathPrefix={pathPrefix} disableTags />
+        </Box>
       </div>
     </Layout>
   );
@@ -87,6 +122,11 @@ export const pageQuery = graphql`
           }
         }
       }
+    }
+    mdx(frontmatter: { projectType: { eq: $type } }) {
+      id
+      body
+      excerpt(pruneLength: 250)
     }
   }
 `;

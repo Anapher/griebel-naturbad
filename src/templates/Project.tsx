@@ -53,6 +53,17 @@ export default function Project({
       excerpt,
       frontmatter: { title, date, type, description },
     },
+    site: {
+      siteMetadata: {
+        templates: {
+          projects: {
+            filters: {
+              type: { pathPrefix },
+            },
+          },
+        },
+      },
+    },
   },
 }: any) {
   const classes = useStyles();
@@ -79,7 +90,7 @@ export default function Project({
                 <Chip
                   label={typeMappings[type]}
                   component={Link}
-                  to={`/projects/type/${type}`}
+                  to={`/${pathPrefix}/${type}`}
                   clickable
                   color="secondary"
                   size={isSmall ? "small" : "medium"}
@@ -121,6 +132,19 @@ export const pageQuery = graphql`
           childImageSharp {
             fluid(maxWidth: 1280) {
               ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        templates {
+          projects {
+            filters {
+              type {
+                pathPrefix
+              }
             }
           }
         }
