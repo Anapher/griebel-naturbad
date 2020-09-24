@@ -9,12 +9,18 @@ import React from "react";
 import { FaCheck } from "react-icons/fa";
 
 const fields = [
-  "Naturschwimmbadplanung",
+  "Öffentliche Naturschwimmbäder",
+  "Freibäder mit biologischer Wasseraufbereitung",
+  "Private Schwimmteiche",
+  "Wasserspielplätze/Sprühfelder",
+  "Campingplätze",
+  "Grünanlagen, Gärten",
+  "Eingriffs- und Ausgleichsplanung",
+  "Machbarkeitsstudien",
   "Parkanlagen",
   "Grünzüge",
   "Siedlungsgrün",
   "Grünordnungsplanung",
-  "Eingriffs- und Ausgleichsplanung",
   "Sport- und Spielanlagen",
   "Freizeitanlagen",
   "Kliniken/Außenanlagen",
