@@ -4,7 +4,15 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import SEO from "../components/seo";
 import Parallax from "../components/Parallax";
-import { makeStyles, Grid, Typography, Box, Button } from "@material-ui/core";
+import {
+  makeStyles,
+  Grid,
+  Typography,
+  Box,
+  Button,
+  ThemeProvider,
+  createMuiTheme,
+} from "@material-ui/core";
 import { container } from "../style/shared";
 import Section from "../components/Section";
 import Impressions from "./index/Impressions";
@@ -13,6 +21,13 @@ import History from "./index/History";
 import Achievements from "./index/Achievements";
 import to from "../utils/to";
 import LogoWhite from "../assets/logo_white.svg";
+import { Parallax as Parallax2 } from "react-parallax";
+
+const darkTheme = createMuiTheme({
+  palette: {
+    type: "dark",
+  },
+});
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -25,12 +40,7 @@ const useStyles = makeStyles(theme => ({
     position: "relative",
     zIndex: 3,
   },
-  sectionContainer: {
-    ...container,
-    zIndex: 12,
-    color: "#000",
-    paddingTop: 24,
-  },
+
   titleText: {
     [theme.breakpoints.down("sm")]: {
       fontSize: 40,
@@ -90,42 +100,42 @@ const IndexPage = ({
         </div>
       </Parallax>
       <div className={classes.content}>
-        <div className={classes.sectionContainer}>
-          <Section title="Impressionen">
-            <Impressions />
-          </Section>
-          <Box marginBottom={4}>
-            <Achievements />
-          </Box>
-          <Section title="Tätigkeitsfeld" dense>
+        <Section title="Impressionen">
+          <Impressions />
+        </Section>
+        <Section paddingBottom={8} paddingTop={0}>
+          <Achievements />
+        </Section>
+        <Parallax2 bgImage={desktop.childImageSharp.fluid.src} strength={500}>
+          <Section title="Tätigkeitsfeld" dense style={{ color: "white" }}>
             <FieldOfActivity />
-          </Section>
-          <Box marginBottom={3}>
-            <Grid container spacing={3}>
-              <Grid item>
-                <Button
-                  variant="outlined"
-                  color="secondary"
-                  {...to("/references")}
-                >
-                  Referenzen
-                </Button>
+            <Box marginTop={4}>
+              <Grid container spacing={3}>
+                <Grid item>
+                  <Button
+                    variant="outlined"
+                    color="secondary"
+                    {...to("/references")}
+                  >
+                    Referenzen
+                  </Button>
+                </Grid>
+                <Grid item>
+                  <Button
+                    variant="outlined"
+                    color="secondary"
+                    {...to("/projects/page/1")}
+                  >
+                    Zu meinen Projekten
+                  </Button>
+                </Grid>
               </Grid>
-              <Grid item>
-                <Button
-                  variant="outlined"
-                  color="secondary"
-                  {...to("/projects/page/1")}
-                >
-                  Zu meinen Projekten
-                </Button>
-              </Grid>
-            </Grid>
-          </Box>
-          <Section title="Geschichte" dense>
-            <History />
+            </Box>
           </Section>
-        </div>
+        </Parallax2>
+        <Section title="Geschichte" dense>
+          <History />
+        </Section>
       </div>
     </Layout>
   );
