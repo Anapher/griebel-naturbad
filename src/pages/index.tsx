@@ -106,7 +106,7 @@ const IndexPage = ({
         <Section paddingBottom={8} paddingTop={0}>
           <Achievements />
         </Section>
-        <Parallax2 bgImage={desktop.childImageSharp.fluid.src} strength={500}>
+        <Parallax2 bgImage={desktop.childImageSharp.fluid.src} strength={350}>
           <Section title="Tätigkeitsfeld" dense style={{ color: "white" }}>
             <FieldOfActivity />
             <Box marginTop={4}>

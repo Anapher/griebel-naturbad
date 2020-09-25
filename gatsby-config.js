@@ -20,7 +20,7 @@ module.exports = {
             title: "Projekte",
             links: [
               {
-                title: "Öffentliche Naturbäder",
+                title: "Öffentliche Naturschwimmbäder",
                 url: "/projects/overview/public",
               },
               {
@@ -28,8 +28,16 @@ module.exports = {
                 url: "/projects/overview/privatePool",
               },
               {
-                title: "Wasserspielplätze",
+                title: "Wasserspielplätze/Sprühfelder",
                 url: "/projects/overview/waterPlayground",
+              },
+              {
+                title: "Eingriffs- und Ausgleichsplanung",
+                url: "/projects/overview/garden",
+              },
+              {
+                title: "Campingplätze",
+                url: "/projects/overview/garden",
               },
               {
                 title: "Grünanlagen, Gärten",

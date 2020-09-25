@@ -19,7 +19,7 @@ const timeline = [
   {
     date: "seit 1998",
     desc:
-      "seit 1998 Wiederaufnahme der selbständigen Tätigkeit als freier Landschaftsarchitekt im Büro für Freiraumplanung mit Sitz in Kassel und Eintragung als freier Landschaftsarchitekt in die Architektenliste der Architektenkammer Hessen",
+      "Wiederaufnahme der selbständigen Tätigkeit als freier Landschaftsarchitekt im Büro für Freiraumplanung mit Sitz in Kassel und Eintragung als freier Landschaftsarchitekt in die Architektenliste der Architektenkammer Hessen",
   },
   {
     date: "1995",
