@@ -1,18 +1,10 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import SEO from "../components/seo";
 import Parallax from "../components/Parallax";
-import {
-  makeStyles,
-  Grid,
-  Typography,
-  Box,
-  Button,
-  ThemeProvider,
-  createMuiTheme,
-} from "@material-ui/core";
+import { makeStyles, Grid, Typography, Box, Button } from "@material-ui/core";
 import { container } from "../style/shared";
 import Section from "../components/Section";
 import Impressions from "./index/Impressions";
@@ -22,6 +14,7 @@ import Achievements from "./index/Achievements";
 import to from "../utils/to";
 import LogoWhite from "../assets/logo_white.svg";
 import { Parallax as Parallax2 } from "react-parallax";
+import { addWhitespaceAfterChars } from "../utils/string-extensions";
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -63,9 +56,17 @@ const useStyles = makeStyles(theme => ({
     textJustify: "inter-character",
     fontSize: 25,
     marginTop: 12,
+    height: "1.5em",
+    lineHeight: "1.5em",
 
     [theme.breakpoints.down("sm")]: {
       fontSize: 14,
+    },
+
+    "&::after": {
+      content: '""',
+      display: "inline-block",
+      width: "100%",
     },
   },
   logo: {
@@ -92,6 +93,12 @@ const IndexPage = ({
 }: any) => {
   const classes = useStyles();
 
+  let subtitleText = "Landschaftsarchitekt BDLA";
+
+  if (!CSS.supports("text-align-last", "justify")) {
+    subtitleText = addWhitespaceAfterChars(subtitleText);
+  }
+
   return (
     <Layout transparentUntil={350} fixed overlayContent>
       <SEO title="Home" />
@@ -106,7 +113,7 @@ const IndexPage = ({
               {subtitle}
             </Typography>
             <Typography variant="subtitle1" className={classes.subtitleText2}>
-              Landschaftsarchitekt BDLA
+              {subtitleText}
             </Typography>
           </div>
         </div>
