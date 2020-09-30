@@ -23,43 +23,60 @@ import to from "../utils/to";
 import LogoWhite from "../assets/logo_white.svg";
 import { Parallax as Parallax2 } from "react-parallax";
 
-const darkTheme = createMuiTheme({
-  palette: {
-    type: "dark",
-  },
-});
-
 const useStyles = makeStyles(theme => ({
   container: {
     ...container,
     zIndex: 12,
     color: "#FFFFFF",
+    display: "flex",
+    alignItems: "center",
+    flexDirection: "column",
+    marginTop: -80,
   },
   content: {
     background: "#FFFFFF",
     position: "relative",
     zIndex: 3,
   },
-
   titleText: {
+    fontSize: 50,
     [theme.breakpoints.down("sm")]: {
-      fontSize: 40,
+      fontSize: 30,
     },
-    [theme.breakpoints.up("sm")]: {
-      marginLeft: 132,
+    [theme.breakpoints.down(380)]: {
+      fontSize: 24,
     },
   },
   subtitleText: {
+    fontSize: 30,
     [theme.breakpoints.down("sm")]: {
-      fontSize: 25,
+      fontSize: 22,
+    },
+    [theme.breakpoints.down(380)]: {
+      fontSize: 20,
+    },
+  },
+  subtitleText2: {
+    width: "100%",
+    textAlign: "justify",
+    textAlignLast: "justify",
+    textJustify: "inter-character",
+    fontSize: 25,
+    marginTop: 12,
+
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 14,
     },
   },
   logo: {
-    width: 100,
-    marginRight: 32,
+    width: 400,
     display: "block",
-    [theme.breakpoints.down("xs")]: {
-      display: "none",
+    marginLeft: -80,
+    marginBottom: -25,
+    [theme.breakpoints.down("sm")]: {
+      width: 180,
+      marginLeft: -15,
+      marginBottom: -45,
     },
   },
 }));
@@ -67,6 +84,7 @@ const useStyles = makeStyles(theme => ({
 const IndexPage = ({
   data: {
     desktop,
+    background2,
     site: {
       siteMetadata: { title, subtitle },
     },
@@ -79,24 +97,18 @@ const IndexPage = ({
       <SEO title="Home" />
       <Parallax filter image={desktop.childImageSharp.fluid}>
         <div className={classes.container}>
-          <Grid container>
-            <Grid item xs={12} sm={12} md={6}>
-              <Typography variant="h2" className={classes.titleText}>
-                {title}
-              </Typography>
-              <Box display="flex" flexDirection="row" alignItems="center">
-                <LogoWhite className={classes.logo} />
-                <Box>
-                  <Typography variant="h4" className={classes.subtitleText}>
-                    {subtitle}
-                  </Typography>
-                  <Typography variant="subtitle1">
-                    Landschaftsarchitekt BDLA
-                  </Typography>
-                </Box>
-              </Box>
-            </Grid>
-          </Grid>
+          <div>
+            <LogoWhite className={classes.logo} />
+            <Typography variant="h2" className={classes.titleText}>
+              {title}
+            </Typography>
+            <Typography variant="h4" className={classes.subtitleText}>
+              {subtitle}
+            </Typography>
+            <Typography variant="subtitle1" className={classes.subtitleText2}>
+              Landschaftsarchitekt BDLA
+            </Typography>
+          </div>
         </div>
       </Parallax>
       <div className={classes.content}>
@@ -106,7 +118,12 @@ const IndexPage = ({
         <Section paddingBottom={8} paddingTop={0}>
           <Achievements />
         </Section>
-        <Parallax2 bgImage={desktop.childImageSharp.fluid.src} strength={350}>
+        <Parallax2
+          strength={350}
+          bgImage={background2.childImageSharp.fluid.srcWebp}
+          bgImageSizes={background2.childImageSharp.fluid.sizes}
+          bgImageSrcSet={background2.childImageSharp.fluid.srcSetWebp}
+        >
           <Section title="Tätigkeitsfeld" dense style={{ color: "white" }}>
             <FieldOfActivity />
             <Box marginTop={4}>
@@ -145,7 +162,16 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query {
-    desktop: file(relativePath: { eq: "landing-page/background.jpg" }) {
+    desktop: file(relativePath: { eq: "landing-page/background2_65.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    background2: file(
+      relativePath: { eq: "landing-page/background_field_of_activity.JPG" }
+    ) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
