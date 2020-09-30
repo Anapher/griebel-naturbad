@@ -9,6 +9,7 @@ import {
   TimelineOppositeContent,
   TimelineSeparator,
 } from "@material-ui/lab";
+import to from "../../utils/to";
 
 const timeline = [
   {
@@ -93,7 +94,7 @@ export default function History() {
         </Timeline>
       </div>
       <Box display="flex" alignItems="center" flexDirection="column">
-        <Button variant="outlined" href="/history">
+        <Button variant="outlined" {...to("/history")}>
           Gesamte Geschichte anzeigen
         </Button>
       </Box>
