@@ -1,5 +1,12 @@
 import React from "react";
-import { useTheme, Typography, Button, Box, Paper } from "@material-ui/core";
+import {
+  useTheme,
+  Typography,
+  Button,
+  Box,
+  Paper,
+  useMediaQuery,
+} from "@material-ui/core";
 import {
   Timeline,
   TimelineConnector,
@@ -55,44 +62,50 @@ const timeline = [
 
 export default function History() {
   const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
 
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-        }}
-      >
-        <Timeline align="left">
-          {timeline.map((x, i) => (
-            <TimelineItem key={x.date}>
-              <TimelineOppositeContent
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "flex-end",
-                }}
-              >
-                <Typography color="textSecondary">{x.date}</Typography>
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineDot
-                  color="secondary"
-                  style={{ width: 20, height: 20 }}
-                  variant="outlined"
-                ></TimelineDot>
-                {i !== timeline.length - 1 && <TimelineConnector />}
-              </TimelineSeparator>
-              <TimelineContent style={{ marginBottom: 16 }}>
-                <Paper style={{ padding: "6px 16px" }}>
-                  <Typography>{x.desc}</Typography>
-                </Paper>
-              </TimelineContent>
-            </TimelineItem>
-          ))}
-        </Timeline>
-      </div>
+      {!isMobile && (
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            width: "100%",
+          }}
+        >
+          <Timeline align="left" style={{ width: "100%", marginLeft: -100 }}>
+            {timeline.map((x, i) => (
+              <TimelineItem key={x.date}>
+                <TimelineOppositeContent
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-end",
+                  }}
+                >
+                  <Typography color="textSecondary">{x.date}</Typography>
+                </TimelineOppositeContent>
+                <TimelineSeparator>
+                  <TimelineDot
+                    color="secondary"
+                    style={{ width: 20, height: 20 }}
+                    variant="outlined"
+                  ></TimelineDot>
+                  {i !== timeline.length - 1 && <TimelineConnector />}
+                </TimelineSeparator>
+                <TimelineContent style={{ marginBottom: 16 }}>
+                  <Paper style={{ padding: "6px 16px" }}>
+                    <Typography style={{ wordWrap: "break-word" }}>
+                      {x.desc}
+                    </Typography>
+                  </Paper>
+                </TimelineContent>
+              </TimelineItem>
+            ))}
+          </Timeline>
+        </div>
+      )}
       <Box display="flex" alignItems="center" flexDirection="column">
         <Button variant="outlined" {...to("/history")}>
           Gesamte Geschichte anzeigen

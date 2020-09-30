@@ -1,7 +1,12 @@
 import React from "react";
 import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
-import { Grid, Typography, Box } from "@material-ui/core";
+import { Grid, Typography, Box, makeStyles } from "@material-ui/core";
+import { fixedFullWidthGrid } from "../../utils/shared";
+
+const useStyles = makeStyles({
+  fixedFullWidthGrid,
+});
 
 const LogoCard = ({ description, logo }) => (
   <Grid item xs={12} sm={6}>
@@ -38,8 +43,10 @@ export default function Achievements() {
     }
   `);
 
+  const classes = useStyles();
+
   return (
-    <Grid container spacing={6}>
+    <Grid container spacing={6} className={classes.fixedFullWidthGrid}>
       <LogoCard
         logo={
           logos.allFile.edges.find(x => x.node.name === "DGfnB_logo").node

@@ -129,7 +129,7 @@ const timeline = [
 ];
 
 const useStyles = makeStyles({
-  container: { ...container, paddingTop: 32 },
+  container: { paddingTop: 32 },
 });
 
 export default function history() {
