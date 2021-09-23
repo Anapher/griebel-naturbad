@@ -4,12 +4,10 @@ title: "Naturschwimmbad Sonneberg"
 date: "2004-01-01T00:00:00.000Z"
 description: ""
 type: "public"
-featuredImage: "./entwurf.jpg"
+featuredImage: "./images/entwurf.jpg"
 ---
 
-!["Entwurf"](./entwurf.jpg)
-
-<SpecificationsTable title="Vorkonzept - technische Daten">
+<SpecificationsTable title="Technische Daten">
     {[
         ["Planungszeitraum:", "2004/2005"],
         ["Gesamtfläche:", "1,85 ha"],
@@ -20,3 +18,6 @@ featuredImage: "./entwurf.jpg"
         ["Ausstattung:", "fünf 25-m-Schwimmbahnen, Sprungfelsen mit 1/3-m-Plattform, Holzstegen aus Lärchenholz, Kiesstrand, drei Sprudelsteine im NS-Bereich, Wasserfall, Badeinsel mit Zugang über Trittsteine, Kinderbecken mit Bachlauf, Sprudelsteinen, Sprühschlange und Kleinkindrutsche, Wasserspielplatz, Beachvolleyball, Tischtennis."],
     ]}
 </SpecificationsTable>
+
+
+![Entwurf](./images/entwurf.jpg)

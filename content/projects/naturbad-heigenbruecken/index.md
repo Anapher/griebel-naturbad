@@ -4,44 +4,10 @@ title: "Naturschwimmbad Heigenbrücken"
 date: "2008-01-01T00:00:00.000Z"
 description: ""
 type: "public"
-featuredImage: "./carousel/p022_0_1.jpg"
+featuredImage: "./carousel/DSCN0008.JPG"
 ---
 
-<Carousel>
-<CarouselImage description="Entwurf">
-
-![Entwurf](./carousel/p022_0_1.jpg)
-
-</CarouselImage>
-<CarouselImage description="Wasserkreislauf">
-
-![Wasserkreislauf](./carousel/p022_0_2.jpg)
-
-</CarouselImage>
-<CarouselImage description="Nichtschwimmer mit Wasserfall">
-
-![Nichtschwimmer mit Wasserfall](./carousel/p022_0_4.jpg)
-
-</CarouselImage>
-<CarouselImage description="Nichtschwimmerbecken mit Sprudelsteinen">
-
-![Nichtschwimmerbecken mit Sprudelsteinen](./carousel/p022_0_5.jpg)
-
-</CarouselImage>
-<CarouselImage description="Kinderbecken">
-
-![Kinderbecken](./carousel/p022_0_6.jpg)
-
-</CarouselImage>
-<CarouselImage description="Wasserfall im Nichtschwimmer">
-
-![Wasserfall im Nichtschwimmer](./carousel/p022_0_7.jpg)
-
-</CarouselImage>
-</Carousel>
-
-
-<SpecificationsTable title="Naturschwimmbad Heigenbrücken- technische Daten">
+<SpecificationsTable title="Technische Daten">
     {[
         ["Baujahr:", "2008/2009"],
         ["Planungszeitraum:", "2006 bis 2008"],
@@ -53,3 +19,9 @@ featuredImage: "./carousel/p022_0_1.jpg"
         ["Ausstattung:", "vier 25-m-Schwimmbahnen, Sprungstein mit, Holzstege aus Lärchenholz, Sonnenterrasse, Kiesstrand, Sprudelsteine im NS-Bereich, Wasserfall, Kinderbecken mit Bachlauf, Sprudelsteinen, Sprühschlange und Kleinkindrutsche, Spielplatz am Bach, Beachvolleyball."],
     ]}
 </SpecificationsTable>
+
+## Entwurf
+![Entwurf](./images/entwurf.jpg)
+
+## Wasserkreislauf
+![Wasserkreislauf](./images/wasserkreislauf.jpg)

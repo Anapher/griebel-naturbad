@@ -4,27 +4,8 @@ title: "Naturschwimmbad Wacken"
 date: "2002-01-01T00:00:00.000Z"
 description: ""
 type: "public"
-featuredImage: "./carousel/p042_0_1.jpg"
+featuredImage: "./images/machbarkeitsstudie1.jpg"
 ---
-
-<Carousel>
-<CarouselImage>
-
-![](./carousel/p042_0_1.jpg)
-
-</CarouselImage>
-<CarouselImage>
-
-![](./carousel/p042_0_2.jpg)
-
-</CarouselImage>
-<CarouselImage>
-
-![](./carousel/p042_0_3.jpg)
-
-</CarouselImage>
-</Carousel>
-
 
 <SpecificationsTable title="Naturschwimmbad Wacken - Vorkonzept - technische Daten">
     {[
@@ -39,3 +20,13 @@ featuredImage: "./carousel/p042_0_1.jpg"
         ["Zusätzl. Ausstattung Var. III:", "Wasserfall, Wasserrutsche, Blockhaussauna, Sonnenterrasse, Wasserspielplatz, Abenteuerspielplatz"],
     ]}
 </SpecificationsTable>
+
+
+## Machbarkeitsstudie Var 1
+![Machbarkeitsstudie Var 1](./images/machbarkeitsstudie1.jpg)
+
+## Machbarkeitsstudie Var 2
+![Machbarkeitsstudie Var 2](./images/machbarkeitsstudie2.jpg)
+
+## Machbarkeitsstudie Var 3
+![Machbarkeitsstudie Var 3](./images/machbarkeitsstudie3.jpg)

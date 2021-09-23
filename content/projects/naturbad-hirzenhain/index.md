@@ -4,13 +4,11 @@ title: "Naturschwimmbad Hirzenhain"
 date: "2005-01-01T00:00:00.000Z"
 description: ""
 type: "public"
-featuredImage: "./entwurf.jpg"
+featuredImage: "./images/vorkonzept.jpg"
 ---
 
-!["Entwurf"](./entwurf.jpg)
 
-
-<SpecificationsTable title="Naturschwimmbad Hirzenhain - Vorkonzept - technische Daten">
+<SpecificationsTable title="Vorkonzept - technische Daten">
     {[
         ["Planungszeitraum:", "2005"],
         ["Gesamtfläche:", "1,35 ha"],
@@ -21,3 +19,6 @@ featuredImage: "./entwurf.jpg"
         ["Ausstattung:", "vier 25-m-Schwimmbahnen, Sprungfelsen mit 1/3-m-Plattform, Holzstegen aus Lärchenholz Kiesstrand, drei Sprudelsteine im NS-Bereich, Breitrutsche, Kinderbecken mit Bachlauf, Sprudelsteinen und Kleinkindrutsche, Wasserspielplatz, Boccia, Beachvolleyball, Tischtennis, opt. Saunagarten mit Blockhaussauna, Tauchbecken, Wasserfall."],
     ]}
 </SpecificationsTable>
+
+
+![Vorkonzept](./images/vorkonzept.jpg)
