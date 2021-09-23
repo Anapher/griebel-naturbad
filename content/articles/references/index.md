@@ -386,3 +386,15 @@ Entwurf (selbstständig)
 
 #### Sanierung Naturschwimmbad Balance GmbH, Kassel
 (selbstständig)
+
+#### Bauantrag Garten mit Pool Griebel, Schönau
+Vorplanung (selbstständig)
+
+#### Spielplatz Schlossgarten Laubach
+Vorkonzept (selbstständig)
+
+#### Naturschwimmbad Velbert
+Vorkonzept (selbstständig)
+
+#### Gartenplanung Fam. Rausch, Ahnatal
+Entwurf (selbstständig)
