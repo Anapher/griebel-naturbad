@@ -233,8 +233,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       // Create pages for each frontmatter tag used in src/content/posts with paginated result pages.
       createProjectType(templates.projects.filters.type),
 
-      // createServiceInfo(templates.services),
-
       createArticles(),
+
+      createServiceInfo(templates.services),
    ]);
 };

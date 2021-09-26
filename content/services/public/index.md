@@ -1,5 +1,6 @@
 ---
 projectType: "public"
+manualExcerpt: "Das konventionelle Schwimmbad mit Heizung und chemischer Wasseraufbereitung (Chlor, Ozon) stellte seit den 60iger Jahren ein flächendeckend vorhandenes, gut besuchtes Freizeitangebot dar und ermöglichte den Bürgern, bei entsprechendem Wetter täglich baden zu gehen."
 ---
 
 # Öffentliche Naturbäder
