@@ -118,13 +118,6 @@ export const pageQuery = graphql`
             type
             date
             description
-            featuredImage {
-               childImageSharp {
-                  fluid(maxWidth: 1280) {
-                     ...GatsbyImageSharpFluid
-                  }
-               }
-            }
          }
       }
       site {
