@@ -7,8 +7,8 @@ import Layout from '../components/Layout';
 import { container } from '../style/shared';
 import typeMappings from '../utils/type-mapping';
 import SEO from '../components/seo';
-import ProjectCarousel from '../project/ProjectCarousel';
 import { getImage } from 'gatsby-plugin-image';
+import Carousel from '../components/Carousel';
 
 const useStyles = makeStyles((theme) => ({
    container: {
@@ -98,7 +98,7 @@ export default function Project({
             </Box>
             <article className={classes.article}>
                {carouselImages.length > 0 && (
-                  <ProjectCarousel images={carouselImages.map((x: any) => getImage(x.node))} />
+                  <Carousel images={carouselImages.map((x: any) => ({ data: getImage(x.node) }))} />
                )}
                <MDXRenderer>{body}</MDXRenderer>
             </article>

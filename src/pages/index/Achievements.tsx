@@ -1,19 +1,28 @@
 import React from 'react';
-import Img from 'gatsby-image';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Grid, Typography, Box, makeStyles } from '@material-ui/core';
 import { fixedFullWidthGrid } from '../../utils/shared';
+import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
 
 const useStyles = makeStyles({
    fixedFullWidthGrid,
 });
 
-const LogoCard = ({ description, logo }) => (
+type LogoCardProps = {
+   description: string;
+   logo: IGatsbyImageData;
+   imgStyle?: React.CSSProperties;
+};
+
+const LogoCard = ({ description, logo, imgStyle }: LogoCardProps) => (
    <Grid item xs={12} sm={6}>
       <Box textAlign="center" flexDirection="column" alignItems="center" display="flex">
-         <div style={{ width: 200, height: 80 }}>
-            <Img fixed={logo} />
-         </div>
+         <GatsbyImage
+            image={logo}
+            alt={description}
+            style={{ width: 200, height: 40, marginBottom: 24, ...imgStyle }}
+            objectFit="contain"
+         />
          <Typography>{description}</Typography>
       </Box>
    </Grid>
@@ -28,9 +37,7 @@ export default function Achievements() {
                node {
                   name
                   childImageSharp {
-                     fixed(width: 200) {
-                        ...GatsbyImageSharpFixed
-                     }
+                     gatsbyImageData(layout: CONSTRAINED, width: 200)
                   }
                }
             }
@@ -43,12 +50,12 @@ export default function Achievements() {
    return (
       <Grid container spacing={6} className={classes.fixedFullWidthGrid}>
          <LogoCard
-            logo={logos.allFile.edges.find((x) => x.node.name === 'DGfnB_logo').node.childImageSharp.fixed}
+            logo={getImage(logos.allFile.edges.find((x: any) => x.node.name === 'DGfnB_logo').node)!}
             description={`Vorstandsmitglied der Deutschen Gesellschaft für naturnahe
                     Badegewässer e. V. seit 1999`}
          />
          <LogoCard
-            logo={logos.allFile.edges.find((x) => x.node.name === 'bdla_logo').node.childImageSharp.fixed}
+            logo={getImage(logos.allFile.edges.find((x: any) => x.node.name === 'bdla_logo').node)!}
             description={`Mitglied im Bund Deutscher
         Landschaftsarchitekten `}
          />

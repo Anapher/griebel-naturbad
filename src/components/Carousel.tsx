@@ -3,17 +3,17 @@ import React from 'react';
 // import "slick-carousel/slick/slick-theme.css";
 import '../style/react-slider.scss';
 import Slider, { Settings } from 'react-slick';
-import Img, { FluidObject, FixedObject } from 'gatsby-image';
-import { makeStyles, Grid, Typography } from '@material-ui/core';
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import { makeStyles, Typography } from '@material-ui/core';
 
 type Image = {
-   fluid?: FluidObject;
-   fixed?: FixedObject;
+   data: IGatsbyImageData;
    description?: string;
 };
 
 type Props = {
    images: Image[];
+   settings?: Partial<Settings>;
 };
 
 const useStyle = makeStyles((theme) => ({
@@ -41,13 +41,14 @@ const useStyle = makeStyles((theme) => ({
    },
 }));
 
-export default function Carousel({ images }: Props) {
+export default function Carousel({ images, settings: userSettings }: Props) {
    const settings: Settings = {
       dots: true,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      ...userSettings,
    };
 
    const classes = useStyle();
@@ -55,14 +56,22 @@ export default function Carousel({ images }: Props) {
    return (
       <div className={classes.main}>
          <Slider {...settings}>
-            {images.map(({ fixed, fluid, description }, i) => (
+            {images.map(({ data, description }, i) => (
                <div key={i}>
-                  <Img fluid={fluid} fixed={fixed} className="slick-image" />
-                  <div className="slick-caption">
-                     <Typography variant="h6" className={classes.text}>
-                        {description}
-                     </Typography>
-                  </div>
+                  <GatsbyImage
+                     key={i}
+                     image={data}
+                     alt={description ?? ''}
+                     style={{ width: '100%', height: '100%' }}
+                     className="slick-image"
+                  />
+                  {description && (
+                     <div className="slick-caption">
+                        <Typography variant="h6" className={classes.text}>
+                           {description}
+                        </Typography>
+                     </div>
+                  )}
                </div>
             ))}
          </Slider>

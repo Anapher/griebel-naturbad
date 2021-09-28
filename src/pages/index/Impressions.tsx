@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Carousel from '../../components/Carousel';
+import { getImage } from 'gatsby-plugin-image';
 
 const imageCaptions: { [name: string]: string } = {
    '1': 'Schimmbad an der Halbkugel',
@@ -19,9 +20,7 @@ export default function Impressions() {
                node {
                   name
                   childImageSharp {
-                     fluid(quality: 90, maxWidth: 1000) {
-                        ...GatsbyImageSharpFluid_withWebp
-                     }
+                     gatsbyImageData(layout: CONSTRAINED, width: 1140, aspectRatio: 1.777)
                   }
                }
             }
@@ -31,8 +30,8 @@ export default function Impressions() {
 
    return (
       <Carousel
-         images={edges.map((x) => ({
-            fluid: x.node.childImageSharp.fluid,
+         images={edges.map((x: any) => ({
+            data: getImage(x.node),
             description: imageCaptions[x.node.name],
          }))}
       />
