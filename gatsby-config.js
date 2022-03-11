@@ -6,6 +6,11 @@ module.exports = {
     lang: "de",
     siteUrl: `https://www.yourdomain.tld`,
 
+    urls: {
+      projectPrefix: "projekte/",
+      projectCategoryPrefix: "leistungen/",
+    },
+
     components: {
       appbar: {
         title: "Büro für Freiraumplanung",
@@ -15,27 +20,27 @@ module.exports = {
             children: [
               {
                 title: "Öffentliche Naturschwimmbäder",
-                to: "/projekte/uebersicht/oeffentliche-baeder",
+                to: "/leistungen/oeffentliche-baeder",
               },
               {
                 title: "Private Schwimmteiche",
-                to: "/projekte/uebersicht/private-schwimmteiche",
+                to: "/leistungen/private-schwimmteiche",
               },
               {
                 title: "Wasserspielplätze/Sprühfelder",
-                to: "/projekte/uebersicht/wasserspielplaetze",
+                to: "/leistungen/wasserspielplaetze",
               },
               {
                 title: "Eingriffs- und Ausgleichsplanung",
-                to: "/projekte/uebersicht/eingriffs-und-ausgleichsplanung",
+                to: "/leistungen/eingriffs-und-ausgleichsplanung",
               },
               {
                 title: "Campingplätze",
-                to: "/projekte/uebersicht/campingplaetze",
+                to: "/leistungen/campingplaetze",
               },
               {
                 title: "Grünanlagen, Gärten",
-                to: "/projekte/uebersicht/gruenanlagen-gaerten",
+                to: "/leistungen/gruenanlagen-gaerten",
               },
             ],
           },
@@ -64,10 +69,19 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
       },
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    `gatsby-transformer-plaintext`,
     {
       resolve: "gatsby-source-filesystem",
       options: {

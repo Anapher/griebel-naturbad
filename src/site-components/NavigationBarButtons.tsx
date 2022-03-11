@@ -41,7 +41,7 @@ const NavButton = ({ data, ...props }: NavButtonProps) => {
         {...props}
       >
         {data.children.map(({ title, to: url }) => (
-          <HeaderButtonDropDownItem {...to(url)}>
+          <HeaderButtonDropDownItem key={url} {...to(url)}>
             <Typography>{title}</Typography>
           </HeaderButtonDropDownItem>
         ))}
