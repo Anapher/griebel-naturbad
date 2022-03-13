@@ -15,9 +15,9 @@ import React, { useMemo } from "react";
 import Layout from "../site-components/Layout";
 import SEO from "../site-components/SEO";
 import projectTypeTranslation from "../utils/project-type-translation";
+import { parseKeyValueTextContent } from "../utils/string-extensions";
 import ProjectCarousel from "./project-template/ProjectCarousel";
 import SpecificationsTable from "./project-template/SpecificationsTable";
-import { parseSpecificationsText } from "./project-template/utils";
 
 const TitleContainer = styled("div")(({ theme }) => ({
   [theme.breakpoints.up("md")]: {
@@ -50,7 +50,7 @@ export default function ProjectTemplate({
   const hasCarousel = carouselImages.length > 0;
 
   const specifications = useMemo(
-    () => parseSpecificationsText(content),
+    () => parseKeyValueTextContent(content),
     [content]
   );
 

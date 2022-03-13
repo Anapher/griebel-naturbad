@@ -50,6 +50,8 @@ type Props = {
 };
 
 export default function ProjectCarousel({ images }: Props) {
+  console.log(images);
+
   return (
     <StyledCarousel
       autoPlay

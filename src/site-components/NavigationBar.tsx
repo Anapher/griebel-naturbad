@@ -18,22 +18,32 @@ import MenuIcon from "@mui/icons-material/Menu";
 import NavigationBarButtons from "./NavigationBarButtons";
 import NavigationDrawer from "./NavigationDrawer";
 
-const AppBarStyled = styled(AppBar)(({ theme }) => ({
+const AppBarStyled = styled(AppBar)(({ theme, transparent }) => ({
   border: 0,
   backgroundColor: "#fff",
   color: "#555",
   boxShadow:
     "0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15)",
   transition: "all 150ms ease 0s",
+  ...(transparent && {
+    backgroundColor: "transparent !important",
+    boxShadow: "none",
+    paddingTop: 25,
+    color: "#FFFFFF",
+  }),
 }));
 
-type Props = {
+export type NavigationBarProps = {
   elevation?: number;
   transparent?: boolean;
   fixed?: boolean;
 };
 
-export default function SiteAppBar({ elevation, fixed, transparent }: Props) {
+export default function SiteAppBar({
+  elevation,
+  fixed,
+  transparent,
+}: NavigationBarProps) {
   const {
     site: {
       siteMetadata: {
@@ -71,7 +81,11 @@ export default function SiteAppBar({ elevation, fixed, transparent }: Props) {
   const onToggleDrawer = () => setDrawerOpen((v) => !v);
 
   return (
-    <AppBarStyled elevation={elevation} color="primary">
+    <AppBarStyled
+      elevation={elevation}
+      color="primary"
+      transparent={transparent}
+    >
       <Container maxWidth="lg">
         <Toolbar disableGutters>
           {mobileLayout && (
