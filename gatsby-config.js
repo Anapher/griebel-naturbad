@@ -64,6 +64,18 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Büro für Freiraumplanung`,
+        short_name: `büro-für-freiraumplanung`,
+        start_url: `/`,
+        background_color: `#27ae60`,
+        theme_color: `#27ae60`,
+        display: `minimal-ui`,
+        icon: `content/icon.png`, // This path is relative to the root of the site.
+      },
+    },
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
