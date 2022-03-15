@@ -4,7 +4,7 @@ module.exports = {
     title: `Büro für Freiraumplanung`,
     description: `Büro für Freiraumplanung. Öffentliche Naturbäder, private Schwimmteiche, Wasserspielplätze, Grünanlagen, Gärten, und mehr.`,
     lang: "de",
-    siteUrl: `https://www.yourdomain.tld`,
+    pathPrefix: "/griebel-naturbad",
 
     urls: {
       projectPrefix: "projekt/",
