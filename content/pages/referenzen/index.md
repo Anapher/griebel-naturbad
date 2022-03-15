@@ -398,3 +398,21 @@ Vorkonzept (selbstständig)
 
 #### Gartenplanung Fam. Rausch, Ahnatal
 Entwurf (selbstständig)
+
+#### Bauantrag Schwimmteich Fam. Reinelt, Königstein
+(selbstständig)
+
+#### Bauantrag Schwimmteich Fam. Reinelt, Königstein
+(selbstständig)
+
+#### Sanierung Naturerlebnisbad Schöllkrippen Sanierungskonzept
+(selbstständig)
+
+#### Campingplatz Freyersee Philippsburg
+Sicherheitsberatung (selbständig)
+
+#### Naturschwimmbad Campingplatz Caravanserei Oberhavel, Oranienburg
+Vorkonzept (selbstständig)
+
+#### Naturbad Hegi-Camping, Tengen
+Entwurf, Genehmigungsplanung, Ausführungsplanung, Ausschreibung/Vergabe (selbständig)
