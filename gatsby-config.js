@@ -5,6 +5,7 @@ module.exports = {
     description: `Büro für Freiraumplanung. Öffentliche Naturbäder, private Schwimmteiche, Wasserspielplätze, Grünanlagen, Gärten, und mehr.`,
     lang: "de",
     pathPrefix: "/griebel-naturbad",
+    siteUrl: "https://anapher.github.io/griebel-naturbad/",
 
     urls: {
       projectPrefix: "projekt/",
