@@ -1,10 +1,10 @@
 /** @type {import('gatsby').GatsbyConfig} */
 module.exports = {
+  pathPrefix: "/griebel-naturbad",
   siteMetadata: {
     title: `Büro für Freiraumplanung`,
     description: `Büro für Freiraumplanung. Öffentliche Naturbäder, private Schwimmteiche, Wasserspielplätze, Grünanlagen, Gärten, und mehr.`,
     lang: "de",
-    pathPrefix: "/griebel-naturbad",
     siteUrl: "https://anapher.github.io/griebel-naturbad/",
 
     urls: {
