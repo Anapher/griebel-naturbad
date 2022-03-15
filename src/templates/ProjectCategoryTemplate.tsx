@@ -50,7 +50,7 @@ export default function ProjectCategoryTemplate({
             <Link {...to(`/${projectCategoryPrefix}${type}`)}>hier</Link>
           </Alert>
         </Box>
-        <Grid container>
+        <Grid container spacing={2} sx={{ mb: 3 }}>
           {edges.map(
             ({
               node: {
