@@ -1,12 +1,3 @@
-import React from "react";
-import {
-  useTheme,
-  Typography,
-  Button,
-  Box,
-  Paper,
-  useMediaQuery,
-} from "@mui/material";
 import {
   Timeline,
   TimelineConnector,
@@ -16,8 +7,10 @@ import {
   TimelineOppositeContent,
   TimelineSeparator,
 } from "@mui/lab";
-import to from "../../utils/to";
+import { Box, Button, Typography } from "@mui/material";
 import { BoxProps } from "@mui/system";
+import React from "react";
+import to from "../../utils/to";
 
 const timeline = [
   {
@@ -96,7 +89,7 @@ export default function History(props: BoxProps) {
         </Timeline>
       </Box>
       <Box display="flex" alignItems="center" flexDirection="column">
-        <Button variant="outlined" {...to("/geschichte")}>
+        <Button variant="outlined" color="secondary" {...to("/geschichte")}>
           Gesamte Geschichte anzeigen
         </Button>
       </Box>

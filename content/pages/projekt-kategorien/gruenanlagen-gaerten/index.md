@@ -1,7 +1,7 @@
 ---
 id: "gruenanlagen-gaerten"
 url: "leistungen/gruenanlagen-gaerten"
-template: "ProjectCategoryTemplate.tsx"
+template: "WorkTemplate.tsx"
 ---
 
 asd

@@ -7,7 +7,8 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`,
 
     urls: {
-      projectPrefix: "projekte/",
+      projectPrefix: "projekt/",
+      projectsPrefix: "projekte/",
       projectCategoryPrefix: "leistungen/",
     },
 
@@ -20,27 +21,27 @@ module.exports = {
             children: [
               {
                 title: "Öffentliche Naturschwimmbäder",
-                to: "/leistungen/oeffentliche-baeder",
+                to: "/projekte/oeffentliche-baeder",
               },
               {
                 title: "Private Schwimmteiche",
-                to: "/leistungen/private-schwimmteiche",
+                to: "/projekte/private-schwimmteiche",
               },
               {
                 title: "Wasserspielplätze/Sprühfelder",
-                to: "/leistungen/wasserspielplaetze",
+                to: "/projekte/wasserspielplaetze",
               },
               {
                 title: "Eingriffs- und Ausgleichsplanung",
-                to: "/leistungen/eingriffs-und-ausgleichsplanung",
+                to: "/projekte/eingriffs-und-ausgleichsplanung",
               },
               {
                 title: "Campingplätze",
-                to: "/leistungen/campingplaetze",
+                to: "/projekte/campingplaetze",
               },
               {
                 title: "Grünanlagen, Gärten",
-                to: "/leistungen/gruenanlagen-gaerten",
+                to: "/projekte/gruenanlagen-gaerten",
               },
             ],
           },

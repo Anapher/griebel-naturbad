@@ -1,6 +1,7 @@
 const path = require(`path`);
 
 const PROJECT_TEMPLATE = "ProjectTemplate.tsx";
+const PROJECTS_TEMPLATE = "ProjectCategoryTemplate.tsx";
 
 const getDirectoryOfFilename = (path) =>
   path.substring(0, path.lastIndexOf("/") + 1);
@@ -48,7 +49,7 @@ async function createProjectPages({ graphql, actions: { createPage } }) {
       allMdx: { edges },
       site: {
         siteMetadata: {
-          urls: { projectPrefix, projectCategoryPrefix },
+          urls: { projectPrefix, projectsPrefix },
         },
       },
     },
@@ -62,6 +63,7 @@ async function createProjectPages({ graphql, actions: { createPage } }) {
           node {
             frontmatter {
               id
+              type
             }
             fileAbsolutePath
           }
@@ -71,7 +73,7 @@ async function createProjectPages({ graphql, actions: { createPage } }) {
         siteMetadata {
           urls {
             projectPrefix
-            projectCategoryPrefix
+            projectsPrefix
           }
         }
       }
@@ -100,7 +102,19 @@ async function createProjectPages({ graphql, actions: { createPage } }) {
       })
   );
 
-  return projectPages;
+  const projectsPages = [
+    ...new Set(edges.map((x) => x.node.frontmatter.type)),
+  ].map((type) =>
+    createPage({
+      path: `${projectsPrefix}${type}`,
+      component: path.resolve(
+        `${__dirname}/src/templates/${PROJECTS_TEMPLATE}`
+      ),
+      context: { type },
+    })
+  );
+
+  return [...projectPages, ...projectsPages];
 }
 
 exports.createPages = async (info) => {

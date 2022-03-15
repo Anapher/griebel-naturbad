@@ -1,7 +1,7 @@
 ---
 id: "private-schwimmteiche"
 url: "leistungen/private-schwimmteiche"
-template: "ProjectCategoryTemplate.tsx"
+template: "WorkTemplate.tsx"
 ---
 
 # Der Schwimmteich

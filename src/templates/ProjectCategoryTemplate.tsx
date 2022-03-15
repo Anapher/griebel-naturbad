@@ -1,4 +1,13 @@
-import { Box, Container, Divider, Grid, Typography } from "@mui/material";
+import {
+  Alert,
+  Box,
+  Button,
+  Container,
+  Divider,
+  Grid,
+  Link,
+  Typography,
+} from "@mui/material";
 import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import React from "react";
@@ -6,23 +15,24 @@ import Layout from "../site-components/Layout";
 import ProjectCard from "../site-components/ProjectCard";
 import SEO from "../site-components/SEO";
 import projectTypeTranslation from "../utils/project-type-translation";
+import to from "../utils/to";
 
 export default function ProjectCategoryTemplate({
   data: {
     allMdx: { edges },
     site: {
       siteMetadata: {
-        urls: { projectPrefix },
+        urls: { projectPrefix, projectCategoryPrefix },
       },
     },
   },
-  pageContext: { id },
+  pageContext: { type },
 }: any) {
   return (
     <Layout>
-      <SEO title={projectTypeTranslation[id]} />
+      <SEO title={projectTypeTranslation[type]} />
       <Container maxWidth="lg" sx={{ mt: 4 }}>
-        <Box textAlign="center" padding={2} marginBottom={2}>
+        <Box textAlign="center" paddingY={3} marginBottom={2}>
           <Box marginBottom={1}>
             <Typography
               color="secondary"
@@ -31,10 +41,14 @@ export default function ProjectCategoryTemplate({
                 fontWeight: "bold",
               }}
             >
-              {projectTypeTranslation[id]}
+              {projectTypeTranslation[type]}
             </Typography>
           </Box>
           <Divider variant="middle" />
+          <Alert sx={{ mt: 3 }} severity="info">
+            Allgemeine Informationen finden Sie{" "}
+            <Link {...to(`/${projectCategoryPrefix}${type}`)}>hier</Link>
+          </Alert>
         </Box>
         <Grid container>
           {edges.map(
@@ -60,16 +74,17 @@ export default function ProjectCategoryTemplate({
 }
 
 export const pageQuery = graphql`
-  query ($id: String!) {
+  query ($type: String!) {
     site {
       siteMetadata {
         urls {
           projectPrefix
+          projectCategoryPrefix
         }
       }
     }
     allMdx(
-      filter: { frontmatter: { type: { eq: $id } } }
+      filter: { frontmatter: { type: { eq: $type } } }
       sort: { fields: frontmatter___year, order: DESC }
     ) {
       edges {
@@ -92,7 +107,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    mdx(frontmatter: { id: { eq: $id } }) {
+    mdx(frontmatter: { id: { eq: $type } }) {
       excerpt(pruneLength: 250)
     }
   }
