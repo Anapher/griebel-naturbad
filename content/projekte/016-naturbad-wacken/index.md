@@ -4,6 +4,7 @@ title: "Naturschwimmbad Wacken"
 year: "2002"
 type: "oeffentliche-baeder"
 featuredImage: ./images/16machbarkeitsstudievar1.jpg
+projectNumber: 16
 ---
 
 ## Machbarkeitsstudie Var 1

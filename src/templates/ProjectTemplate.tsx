@@ -16,7 +16,9 @@ import Layout from "../site-components/Layout";
 import SEO from "../site-components/SEO";
 import projectTypeTranslation from "../utils/project-type-translation";
 import { parseKeyValueTextContent } from "../utils/string-extensions";
-import ProjectCarousel from "./project-template/ProjectCarousel";
+import ProjectCarousel, {
+  renderTextOverlay,
+} from "./project-template/ProjectCarousel";
 import SpecificationsTable from "./project-template/SpecificationsTable";
 
 const TitleContainer = styled("div")(({ theme }) => ({
@@ -89,6 +91,7 @@ export default function ProjectTemplate({
               images={carouselImages.map((x: any) => ({
                 image: getImage(x.node),
               }))}
+              renderOverlay={renderTextOverlay}
             />
           )}
           <SpecificationsTable

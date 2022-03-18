@@ -40,18 +40,32 @@ const ImageContainer = styled("div")(({ theme }) => ({
   },
 }));
 
-type CarouselImage = {
+export function renderTextOverlay({ desc }: CarouselImage) {
+  return (
+    <ImageDescriptionContainer>
+      {desc && (
+        <ImageDescription>
+          <Typography>{desc}</Typography>
+        </ImageDescription>
+      )}
+    </ImageDescriptionContainer>
+  );
+}
+
+export type CarouselImage = {
   image: IGatsbyImageData;
   desc?: string;
 };
 
-type Props = {
-  images: CarouselImage[];
+type Props<T extends CarouselImage> = {
+  images: T[];
+  renderOverlay?: (element: T) => React.ReactNode | null | undefined;
 };
 
-export default function ProjectCarousel({ images }: Props) {
-  console.log(images);
-
+export default function ProjectCarousel<T extends CarouselImage>({
+  images,
+  renderOverlay,
+}: Props<T>) {
   return (
     <StyledCarousel
       autoPlay
@@ -60,20 +74,14 @@ export default function ProjectCarousel({ images }: Props) {
       indicators={false}
       duration={300}
     >
-      {images.map(({ image, desc }, i) => (
+      {images.map((element, i) => (
         <ImageContainer key={i}>
           <GatsbyImage
-            image={image}
-            alt={desc || ""}
+            image={element.image}
+            alt={element.desc || ""}
             style={{ width: "100%", height: "100%", borderRadius: 8 }}
           />
-          <ImageDescriptionContainer>
-            {desc && (
-              <ImageDescription>
-                <Typography>{desc}</Typography>
-              </ImageDescription>
-            )}
-          </ImageDescriptionContainer>
+          {renderOverlay?.(element)}
         </ImageContainer>
       ))}
     </StyledCarousel>
