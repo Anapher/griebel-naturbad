@@ -1,6 +1,6 @@
 ---
 id: "naturschwimmbad-sonneberg"
-title: "Naturschwimmbad Sonneberg"
+title: "Naturbad Sonneberg"
 year: "2005"
 type: "oeffentliche-baeder"
 featuredImage: ./images/23vorkonzept.jpg
