@@ -30,11 +30,11 @@ module.exports = {
               },
               {
                 title: "Wasserspielplätze/Sprühfelder",
-                to: "/projekte/wasserspielplaetze",
+                to: "/projekte/wasserspielplaetze-spruehfelder",
               },
               {
                 title: "Eingriffs- und Ausgleichsplanung",
-                to: "/projekte/eingriffs-und-ausgleichsplanung",
+                to: "/projekte/eingriffs-ausgleichsplanung",
               },
               {
                 title: "Campingplätze",
