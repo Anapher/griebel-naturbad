@@ -2,7 +2,7 @@
 id: "naturbad-heigenbruecken"
 title: "Naturbad Heigenbrücken"
 year: "2006"
-type: "oeffentliche-baeder"
+type: ["oeffentliche-baeder"]
 featuredImage: ./carousel/dscn0008.jpg
 projectNumber: 35
 ---

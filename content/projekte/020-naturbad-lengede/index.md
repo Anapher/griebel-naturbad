@@ -2,7 +2,7 @@
 id: "naturbad-lengede"
 title: "Naturbad Lengede"
 year: "2004"
-type: "oeffentliche-baeder"
+type: ["oeffentliche-baeder"]
 featuredImage: ./carousel/dscn0155.jpg
 projectNumber: 20
 ---

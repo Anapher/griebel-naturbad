@@ -2,7 +2,7 @@
 id: "naturschwimmbad-rurberg"
 title: "Naturschwimmbad Rurberg"
 year: "2002"
-type: "oeffentliche-baeder"
+type: ["oeffentliche-baeder"]
 featuredImage: ./images/17machbarkeitsstudievar.i.jpg
 ---
 

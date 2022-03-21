@@ -2,7 +2,7 @@
 id: "naturbad-olfen"
 title: "Naturbad Olfen"
 year: "2004"
-type: "oeffentliche-baeder"
+type: ["oeffentliche-baeder"]
 featuredImage: ./carousel/dscn0066.jpg
 projectNumber: 24
 ---

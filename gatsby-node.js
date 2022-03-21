@@ -103,7 +103,7 @@ async function createProjectPages({ graphql, actions: { createPage } }) {
   );
 
   const projectsPages = [
-    ...new Set(edges.map((x) => x.node.frontmatter.type)),
+    ...new Set(edges.flatMap((x) => x.node.frontmatter.type)),
   ].map((type) =>
     createPage({
       path: `${projectsPrefix}${type}`,

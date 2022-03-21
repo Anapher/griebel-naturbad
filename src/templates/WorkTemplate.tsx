@@ -69,7 +69,7 @@ export const pageQuery = graphql`
       }
     }
     allMdx(
-      filter: { frontmatter: { type: { eq: $id } } }
+      filter: { frontmatter: { type: { in: [$id] } } }
       limit: 6
       sort: { fields: frontmatter___year, order: DESC }
     ) {

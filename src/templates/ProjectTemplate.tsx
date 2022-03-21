@@ -65,18 +65,20 @@ export default function ProjectTemplate({
             <div>
               <TitleContainer>
                 <Typography variant="h4">{title}</Typography>
-                <Chip
-                  label={projectTypeTranslation[type]}
-                  component={Link}
-                  to={`/${projectCategoryPrefix}${type}`}
-                  clickable
-                  color="secondary"
-                  size={isSmall ? "small" : "medium"}
-                  style={{
-                    marginBottom: isSmall ? 8 : 0,
-                    marginLeft: isSmall ? 0 : 24,
-                  }}
-                />
+                {(type as string[]).map((x) => (
+                  <Chip
+                    label={projectTypeTranslation[x]}
+                    component={Link}
+                    to={`/${projectCategoryPrefix}${x}`}
+                    clickable
+                    color="secondary"
+                    size={isSmall ? "small" : "medium"}
+                    style={{
+                      marginBottom: isSmall ? 8 : 0,
+                      marginLeft: isSmall ? 0 : 24,
+                    }}
+                  />
+                ))}
               </TitleContainer>
               <Typography variant="body2">{year}</Typography>
             </div>

@@ -2,7 +2,7 @@
 id: "naturbad-schoenau"
 title: "Naturbad Schönau"
 year: "2001"
-type: "oeffentliche-baeder"
+type: ["oeffentliche-baeder"]
 featuredImage: ./images/vorkonzept.jpg
 projectNumber: 13
 ---

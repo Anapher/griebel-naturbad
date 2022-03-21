@@ -2,7 +2,7 @@
 id: "naturschwimmbad-einruhr"
 title: "Naturschwimmbad Einruhr"
 year: "2005"
-type: "oeffentliche-baeder"
+type: ["oeffentliche-baeder"]
 featuredImage: ./images/22entwurf.jpg
 projectNumber: 22
 ---

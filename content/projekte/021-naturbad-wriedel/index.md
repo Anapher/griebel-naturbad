@@ -2,7 +2,7 @@
 id: "naturbad-wriedel"
 title: "Naturbad Wriedel"
 year: "2004"
-type: "oeffentliche-baeder"
+type: ["oeffentliche-baeder"]
 featuredImage: ./images/21machbarkeitsstudievar1.jpg
 projectNumber: 21
 ---

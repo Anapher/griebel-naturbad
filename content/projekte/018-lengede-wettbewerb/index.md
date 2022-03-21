@@ -2,7 +2,7 @@
 id: "lengede-wettbewerb"
 title: "Lengede Wettbewerb"
 year: "2003"
-type: "oeffentliche-baeder"
+type: ["oeffentliche-baeder"]
 featuredImage: ./images/18übersicht.jpg
 projectNumber: 18
 ---

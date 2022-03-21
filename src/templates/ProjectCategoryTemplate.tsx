@@ -83,7 +83,7 @@ export const pageQuery = graphql`
       }
     }
     allMdx(
-      filter: { frontmatter: { type: { eq: $type } } }
+      filter: { frontmatter: { type: { in: [$type] } } }
       sort: { fields: frontmatter___year, order: DESC }
     ) {
       edges {

@@ -2,7 +2,7 @@
 id: "naturbad-schwalbach"
 title: "Naturbad Schwalbach"
 year: "2010"
-type: "oeffentliche-baeder"
+type: ["oeffentliche-baeder"]
 featuredImage: ./carousel/img_3318.jpg
 projectNumber: 52
 ---

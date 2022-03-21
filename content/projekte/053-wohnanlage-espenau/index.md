@@ -2,7 +2,7 @@
 id: "wohnanlage-espenau"
 title: "Wohnanlage Espenau"
 year: "2010"
-type: "gruenanlagen-gaerten"
+type: ["gruenanlagen-gaerten"]
 featuredImage: ./carousel/img_4567.jpg
 projectNumber: 53
 ---
