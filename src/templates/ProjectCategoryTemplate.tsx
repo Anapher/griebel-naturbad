@@ -56,7 +56,13 @@ export default function ProjectCategoryTemplate({
                 frontmatter: { id, year, title, featuredImage },
               },
             }: any) => (
-              <Grid item key={id} xs={12} sm={4}>
+              <Grid
+                item
+                key={id}
+                xs={12}
+                sm={4}
+                sx={{ display: "flex", flexDirection: "row" }}
+              >
                 <ProjectCard
                   title={title}
                   url={`/${projectPrefix}${id}`}
