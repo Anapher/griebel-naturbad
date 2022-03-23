@@ -43,7 +43,11 @@ async function createStaticPages({ graphql, actions: { createPage } }) {
   );
 }
 
-async function createProjectPages({ graphql, actions: { createPage } }) {
+async function createProjectPages({
+  graphql,
+  actions: { createPage },
+  reporter,
+}) {
   const {
     data: {
       allMdx: { edges },
@@ -64,6 +68,7 @@ async function createProjectPages({ graphql, actions: { createPage } }) {
             frontmatter {
               id
               type
+              projectNumber
             }
             fileAbsolutePath
           }
@@ -79,6 +84,23 @@ async function createProjectPages({ graphql, actions: { createPage } }) {
       }
     }
   `);
+
+  if (
+    new Set(edges.map((x) => x.node.frontmatter.projectNumber)).size !=
+    edges.length
+  ) {
+    const duplicatedIds = edges.filter((x) =>
+      edges.find(
+        (y) =>
+          y.node.frontmatter.projectNumber ===
+            x.node.frontmatter.projectNumber && x !== y
+      )
+    );
+
+    reporter.panicOnBuild(`Some project ids are duplicated:
+    ${duplicatedIds.map((x) => `${x.node.fileAbsolutePath}`).join("\n")}`);
+    return;
+  }
 
   const projectPages = edges.map(
     ({
