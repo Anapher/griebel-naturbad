@@ -81,7 +81,7 @@ Durch die jederzeit gewährleistete optimale Sauerstoffversorgung werden an das 
 
 Das technische Feuchtgebiet [FG] ist ein kostengünstiger Aufbereitungsbereich für gering bis mittelbelastete Naturschwimmbäder in Gemeinden mit überschaubarem Einzugsbereich abseits der Ballungszentren.
 
-Bei hochbelasteten Naturschwimmbädern wird das techni%che Feuchtgebiet [FG] mit einem Mehrschichtsubstratfilter gem. FLL-Richtlinie von 2011 kombiniert, um die Betriebssicherheit des Bades selbst während extremen Besucherandrang bei einer Hitzewelle über mehrere Wochen zu gewährleisten.
+Bei hochbelasteten Naturschwimmbädern wird das technische Feuchtgebiet [FG] mit einem Mehrschichtsubstratfilter gem. FLL-Richtlinie von 2011 kombiniert, um die Betriebssicherheit des Bades selbst während extremen Besucherandrang bei einer Hitzewelle über mehrere Wochen zu gewährleisten.
 
 
 Die Konzeption des Aufbereitungsbereiches erfolgt jeweils individuell auf die Besonderheiten Ihres Projektes zugeschnitten nach den besonderen örtlichen Erfordernissen, Ihren Ansprüchen hinsichtlich Besucherkapazität sowie der zur Verfügung stehenden Füllwasserqualität!
