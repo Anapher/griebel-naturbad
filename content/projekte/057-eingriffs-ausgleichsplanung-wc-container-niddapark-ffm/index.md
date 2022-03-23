@@ -4,7 +4,7 @@ title: "Niddapark Frankfurt/Main, Eingriffs- Ausgleichsplanung"
 year: "2011"
 type: ["eingriffs-ausgleichsplanung"]
 featuredImage: ./images/057-11freiflaechenplan.png
-projectNumber: 59
+projectNumber: 57
 ---
 
 ![Freiflächenplan](./images/057-11freiflaechenplan.png)
