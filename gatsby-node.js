@@ -136,6 +136,8 @@ async function createProjectPages({
     })
   );
 
+  console.log(`Create ${projectsPages.length} project pages`);
+
   return [...projectPages, ...projectsPages];
 }
 
