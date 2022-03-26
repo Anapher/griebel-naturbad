@@ -1,6 +1,6 @@
 Planungszeitraum: 2013/2014
 Bauzeit: 2014
-Gesamtfläche: 2.000 m2
+Gesamtfläche: 2.000 m²
 BauweiseSchwimmteich: Neubau, 1-Kammer-System
 Badebecken: Schwimmteich Typ 2, 3 m tief mit Oberflächenreinigung
 Nutzbare Wasserfläche: 150 m²
