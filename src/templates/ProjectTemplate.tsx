@@ -2,6 +2,7 @@ import {
   Chip,
   Container,
   Divider,
+  Stack,
   styled,
   Typography,
   useMediaQuery,
@@ -20,15 +21,6 @@ import ProjectCarousel, {
   renderTextOverlay,
 } from "./project-template/ProjectCarousel";
 import SpecificationsTable from "./project-template/SpecificationsTable";
-
-const TitleContainer = styled("div")(({ theme }) => ({
-  [theme.breakpoints.up("md")]: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-}));
 
 export default function ProjectTemplate({
   data: {
@@ -61,10 +53,23 @@ export default function ProjectTemplate({
       <SEO title={title} />
       <Container maxWidth="lg" sx={{ py: 4 }}>
         <Box marginBottom={4}>
-          <TitleContainer>
-            <div>
-              <TitleContainer>
-                <Typography variant="h4">{title}</Typography>
+          <Stack direction="column" spacing={1}>
+            <Stack
+              direction={{ xs: "column", md: "row" }}
+              justifyContent="space-between"
+              spacing={2}
+            >
+              <Typography
+                variant="h4"
+                sx={{ fontSize: { xs: 20, sm: 25, md: 30 } }}
+              >
+                {title}
+              </Typography>
+              <Stack
+                spacing={1}
+                direction={{ sm: "row", xs: "column" }}
+                alignItems="flex-start"
+              >
                 {(type as string[]).map((x) => (
                   <Chip
                     label={projectTypeTranslation[x]}
@@ -73,16 +78,12 @@ export default function ProjectTemplate({
                     clickable
                     color="secondary"
                     size={isSmall ? "small" : "medium"}
-                    style={{
-                      marginBottom: isSmall ? 8 : 0,
-                      marginLeft: isSmall ? 0 : 24,
-                    }}
                   />
                 ))}
-              </TitleContainer>
-              <Typography variant="body2">{year}</Typography>
-            </div>
-          </TitleContainer>
+              </Stack>
+            </Stack>
+            <Typography variant="body2">{year}</Typography>
+          </Stack>
           <Box marginY={2}>
             <Divider />
           </Box>
