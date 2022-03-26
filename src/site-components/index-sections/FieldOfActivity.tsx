@@ -85,13 +85,13 @@ export default function FieldOfActivity() {
             >
               Referenzen
             </Button>{" "}
-            <Button
+            {/* <Button
               variant="contained"
               color="secondary"
               {...to("/projects/page/1")}
             >
               Zu meinen Projekten
-            </Button>
+            </Button> */}
           </Stack>
         </Box>
       </Container>
