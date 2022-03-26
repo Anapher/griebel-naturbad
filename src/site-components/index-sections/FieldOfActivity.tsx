@@ -3,6 +3,7 @@ import {
   Button,
   Container,
   Grid,
+  List,
   ListItem,
   ListItemIcon,
   ListItemText,
@@ -54,6 +55,7 @@ export default function FieldOfActivity() {
           layout="fullWidth"
         />
       }
+      parallaxScroll={400}
     >
       <Container maxWidth="lg" sx={{ py: 5, color: "white" }}>
         <Typography variant="h5" align="center" gutterBottom sx={{ mb: 4 }}>
@@ -62,17 +64,19 @@ export default function FieldOfActivity() {
         <Grid container spacing={0}>
           {fields.map((x, i) => (
             <Grid item key={x} xs={12} md={6} lg={4}>
-              <ListItem>
-                <ListItemIcon>
-                  <FaCheck color={theme.palette.secondary.main} size={16} />
-                </ListItemIcon>
-                <ListItemText
-                  primary={x}
-                  primaryTypographyProps={{
-                    fontWeight: i > 5 ? undefined : 600,
-                  }}
-                />
-              </ListItem>
+              <List disablePadding>
+                <ListItem>
+                  <ListItemIcon>
+                    <FaCheck color={theme.palette.secondary.main} size={16} />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={x}
+                    primaryTypographyProps={{
+                      fontWeight: i > 5 ? undefined : 600,
+                    }}
+                  />
+                </ListItem>
+              </List>
             </Grid>
           ))}
         </Grid>
